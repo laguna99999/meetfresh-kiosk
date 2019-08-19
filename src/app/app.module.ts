@@ -9,6 +9,7 @@ import { CategoryComponent } from './component/category/category.component';
 import { ConfirmComponent } from './component/confirm/confirm.component';
 import { CustomizeComponent } from './component/customize/customize.component';
 import { EndComponent } from './component/end/end.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EndComponent } from './component/end/end.component';
     EndComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
