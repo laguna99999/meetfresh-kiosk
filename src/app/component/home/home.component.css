@@ -1,0 +1,32 @@
+.home{
+    background: black;
+    height: 100vh;
+}
+
+.home img{
+    width: 100vw;
+}
+
+.home .navigation{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .navigation button{
+    font-family: 'texgyreadventor', sans-serif;
+    font-size: 17px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    line-height: 30px;
+    width: 42vw;
+    margin: 0 2vw;
+    padding: 6px 0;
+    outline: none;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+}
+.home .navigation button:active{
+    transform: scale(0.95);
+}
