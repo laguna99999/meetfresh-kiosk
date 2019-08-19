@@ -11,7 +11,7 @@ import { CustomizeComponent } from './component/customize/customize.component';
 import { EndComponent } from './component/end/end.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
+import { MaterialModule } from './module/material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

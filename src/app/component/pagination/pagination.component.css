@@ -1,0 +1,65 @@
+.pagination{
+    padding: 10vh 18vw;
+    height: 80vh;
+    color: #424242;
+    text-align: center;
+    position: relative;
+}
+.pagination h1{
+    padding-top: 30px;
+    margin-bottom: 5px;
+    font-size: 23px;
+    text-align: center;
+}
+.pagination .page_number{
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 2px solid #424242;
+    margin-bottom: 25px;
+}
+.pagination .numbers{
+    margin-bottom: 30px;
+    width: 95%;
+    margin: 0 auto;
+}
+.pagination .numbers .line{
+    display: flex;
+    justify-content: space-around;
+}
+.pagination .numbers .line button{
+    font-family: 'texgyreadventor', sans-serif;
+    font-size: 45px;
+    width: 33.33%;
+    height: 65px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #424242;
+}
+.pagination .numbers .line button mat-icon{
+    font-size: 33px;
+    width: 33px;
+    height: 33px;
+}
+.pagination .confirm{
+    font-family: 'texgyreadventor', sans-serif;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 1px solid #ffba22;
+    color: #ffba22;
+    width: 90px;
+    height: 55px;
+    margin-top: 25px;
+}
+.pagination .help{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.pagination .help mat-icon{
+    font-size: 45px;
+    width: 50px;
+    height: 50px;
+}

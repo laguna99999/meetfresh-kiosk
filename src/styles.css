@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: texgyreadventor;
+    font-family: 'texgyreadventor';
     src: url('assets/font/texgyreadventor-regular.otf');
     font-weight: bold;
 }
