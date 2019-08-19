@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
 
-    page_number: integer = 0;
+    page_number: number = 0;
 
     constructor() { }
 
     ngOnInit() {
     }
 
-    number(num: integer){
+    number(num: number){
         if(this.page_number < 10){
             this.page_number = this.page_number * 10 + num;
         }
