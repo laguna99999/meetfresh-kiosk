@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-pagination',
     templateUrl: './pagination.component.html',
@@ -9,7 +9,9 @@ export class PaginationComponent implements OnInit {
 
     page_number: number = 0;
 
-    constructor() { }
+    constructor(
+        private router: Router
+    ) { }
 
     ngOnInit() {
     }
@@ -25,7 +27,11 @@ export class PaginationComponent implements OnInit {
     }
 
     enter(){
-        console.log(this.page_number)
+        if(this.page_number > 0 && this.page_number < 30){
+            this.router.navigate(['category', this.page_number]);
+        }else{
+            //Exception
+        }
     }
 
     help(){

@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
+
 export class ApiService {
 
-  constructor() { }
+    private baseURL = "/assets/dummydata/";
+
+    constructor(
+        private http: HttpClient
+    ) { }
+
+    public category(){
+        return this.http.get(`${this.baseURL}category.json`);
+    }
+    public product(){
+        return this.http.get(`${this.baseURL}product.json`);
+    }
 }
