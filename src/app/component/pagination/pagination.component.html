@@ -1,34 +1,36 @@
-<div class="container">
-    <div class="pagination">
-        <h1>Pick up Your Pager<br/> & Enter the number</h1>
-        <div class="page_number">
-            {{ page_number }}
+<div class="pager">
+    <div class="header"></div>
+    <div class="sub-header">
+        <img src="assets/img/2.png" alt="Sub header decoration">
+    </div>
+    <h1>Pick up Your Pager<br/> & Enter the number</h1>
+    <div class="page_number">
+        {{ page_number }}
+    </div>
+    <div class="numbers">
+        <div class="line">
+            <button type="button" matRipple (click)="number(1)">1</button>
+            <button type="button" matRipple (click)="number(2)">2</button>
+            <button type="button" matRipple (click)="number(3)">3</button>
         </div>
-        <div class="numbers">
-            <div class="line">
-                <button type="button" matRipple (click)="number(1)">1</button>
-                <button type="button" matRipple (click)="number(2)">2</button>
-                <button type="button" matRipple (click)="number(3)">3</button>
-            </div>
-            <div class="line">
-                <button type="button" matRipple (click)="number(4)">4</button>
-                <button type="button" matRipple (click)="number(5)">5</button>
-                <button type="button" matRipple (click)="number(6)">6</button>
-            </div>
-            <div class="line">
-                <button type="button" matRipple (click)="number(7)">7</button>
-                <button type="button" matRipple (click)="number(8)">8</button>
-                <button type="button" matRipple (click)="number(9)">9</button>
-            </div>
-            <div class="line">
-                <button type="button" matRipple disabled> </button>
-                <button type="button" matRipple (click)="number(0)">0</button>
-                <button type="button" matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></button>
-            </div>
+        <div class="line">
+            <button type="button" matRipple (click)="number(4)">4</button>
+            <button type="button" matRipple (click)="number(5)">5</button>
+            <button type="button" matRipple (click)="number(6)">6</button>
         </div>
-        <button type="button" class="confirm" matRipple (click)="enter()">Enter</button>
-        <div class="help" (click)="help()">
-            <mat-icon matRipple aria-hidden="false" aria-label="MeatFresh help">help</mat-icon>
+        <div class="line">
+            <button type="button" matRipple (click)="number(7)">7</button>
+            <button type="button" matRipple (click)="number(8)">8</button>
+            <button type="button" matRipple (click)="number(9)">9</button>
         </div>
+        <div class="line">
+            <button type="button" matRipple disabled> </button>
+            <button type="button" matRipple (click)="number(0)">0</button>
+            <button type="button" matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></button>
+        </div>
+    </div>
+    <button type="button" class="confirm" matRipple (click)="enter()">Enter</button>
+    <div class="help" (click)="help()">
+        <mat-icon matRipple aria-hidden="false" aria-label="MeatFresh help">help</mat-icon>
     </div>
 </div>

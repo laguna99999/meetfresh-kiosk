@@ -1,9 +1,13 @@
-<div class="container">
-    <div class="home">
-        <img src="assets/img/home.png" alt="MeetFresh Kiosk">
-        <div class="navigation">
-            <button matRipple type="button" name="button" (click)="start()">Touch to Start</button>
-            <button matRipple type="button" name="button">Update The Points</button>
-        </div>
+<div class="home">
+    <div class="logo">
+        <img src="{{ logo }}" alt="MeetFresh logo">
+    </div>
+    <div class="header">
+        <h1>Top Seller</h1>
+        <h3>Taro Ball Signature</h3>
+    </div>
+    <div class="footer">
+        <button type="button" name="touch-to-start" routerLink="/pager">Touch to Start</button>
+        <button type="button" name="update-the-points">Update The Points</button>
     </div>
 </div>

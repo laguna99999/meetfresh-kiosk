@@ -1,33 +1,46 @@
 .home{
-    background: black;
-    height: 100vh;
+    background-color: black;
+    background-image: url('/assets/img/home-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
 }
-
-.home img{
+.home .logo{
+    width: 100%;
+    text-align: center;
+}
+.home .logo img{
+    margin: 48px auto;
+    width: 225px;
+}
+.home .header{
+    color: #453a2b;
+}
+.home .header h1{
+    margin: 0 40px;
+    font-family: 'cookie', cursive;
+    font-size: 50px;
+}
+.home .header h3{
+    margin: 0 40px;
+}
+.home .footer{
+    position: fixed;
+    bottom: 0;
+    min-height: 94px;
+    height: calc(100vh - 662px);
     width: 100vw;
-}
-
-.home .navigation{
-    height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background: black;
 }
-
-.home .navigation button{
-    font-family: 'texgyreadventor', sans-serif;
-    font-size: 17px;
-    background: black;
-    border: 1px solid white;
+.home .footer button{
+    padding: 0 20px;
+    background-color: black;
+    line-height: 40px;
     color: white;
-    line-height: 30px;
-    width: 42vw;
-    margin: 0 2vw;
-    padding: 6px 0;
+    font-size: 17px;
     outline: none;
-    transition: background 250ms ease-in-out, transform 150ms ease;
-}
-.home .navigation button:active{
-    transform: scale(0.95);
+    font-family: 'texgyreadventor';
+    border: 1px solid white;
 }

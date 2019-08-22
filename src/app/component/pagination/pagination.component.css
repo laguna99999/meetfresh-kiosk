@@ -1,47 +1,57 @@
-.pagination{
-    padding: 10vh 18vw;
-    height: 80vh;
+.pager{
     color: #424242;
     text-align: center;
+    height: 100vh;
     position: relative;
 }
-.pagination h1{
-    padding-top: 30px;
-    margin-bottom: 5px;
-    font-size: 23px;
+.pager .header{
+    height: 94px;
+    background-image: url('/assets/img/3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pager .sub-header img{
+    height: 40px;
+}
+.pager h1{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-size: 22px;
     text-align: center;
 }
-.pagination .page_number{
+.pager .page_number{
+    width: 60vw;
+    margin: 0 auto;
     font-size: 35px;
     text-align: center;
     border-bottom: 2px solid #424242;
     margin-bottom: 25px;
 }
-.pagination .numbers{
+.pager .numbers{
+    width: 60vw;
     margin-bottom: 30px;
-    width: 95%;
     margin: 0 auto;
 }
-.pagination .numbers .line{
+.pager .numbers .line{
     display: flex;
     justify-content: space-around;
 }
-.pagination .numbers .line button{
+.pager .numbers .line button{
     font-family: 'texgyreadventor', sans-serif;
     font-size: 45px;
     width: 33.33%;
-    height: 65px;
+    height: 63px;
     border: none;
     background: transparent;
     outline: none;
     color: #424242;
 }
-.pagination .numbers .line button mat-icon{
+.pager .numbers .line button mat-icon{
     font-size: 33px;
     width: 33px;
     height: 33px;
 }
-.pagination .confirm{
+.pager .confirm{
     font-family: 'texgyreadventor', sans-serif;
     font-size: 20px;
     background: transparent;
@@ -51,14 +61,14 @@
     color: #ffba22;
     width: 90px;
     height: 55px;
-    margin-top: 25px;
+    margin-top: 35px;
 }
-.pagination .help{
+.pager .help{
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
 }
-.pagination .help mat-icon{
+.pager .help mat-icon{
     font-size: 45px;
     width: 50px;
     height: 50px;

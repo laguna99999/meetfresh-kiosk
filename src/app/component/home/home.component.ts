@@ -7,14 +7,17 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+    logo: string = "";
+
     constructor(
         private router: Router
     ) { }
 
     ngOnInit() {
-    }
-
-    start(){
-        this.router.navigate(['pager']);
+        if(window.innerWidth < 450){
+            this.logo = "assets/img/logo.png";
+        }else{
+            this.logo = "assets/img/logo-big.png";
+        }
     }
 }
