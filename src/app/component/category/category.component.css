@@ -1,0 +1,20 @@
+.category{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.category .category-item{
+    position: relative;
+}
+.category .category-item img{
+    width: 44vw;
+}
+.category .category-item .category-name{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+}

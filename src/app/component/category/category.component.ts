@@ -12,7 +12,7 @@ export class CategoryComponent implements OnInit {
     subscriber: any;
 
     category: any;
-
+    error: string;
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
@@ -23,14 +23,13 @@ export class CategoryComponent implements OnInit {
         this.subscriber = this.route.params.subscribe(params => {
 			this.param = +params['param']; // (+) converts string 'param' to a number
 		});
+    }
+
+    ngAfterViewInit(){
         return this.api.category().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
         );
-    }
-
-    ngAfterViewInit(){
-
     }
 
     ngOnDestroy(){
@@ -39,9 +38,8 @@ export class CategoryComponent implements OnInit {
 
     private handleResponse(data){
         this.category = data.category;
-        console.log(this.category)
     }
     private handleError(error){
-        console.error(error.message);
+        this.error = error.message;
     }
 }

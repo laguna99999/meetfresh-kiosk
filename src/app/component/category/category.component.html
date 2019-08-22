@@ -1,3 +1,18 @@
 <div class="category">
-    
+    <div class="wrap">
+        <div class="category-item" *ngFor="let item of category; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="product/{{item.id}}">
+            <img *ngIf="i % 2 == 0" src="{{item.img}}" alt="Category name">
+            <div *ngIf="i % 2 == 0" class="category-name">
+                {{item.name}}
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="category-item" *ngFor="let item of category; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="product/{{item.id}}">
+            <img *ngIf="i % 2 == 1" src="{{item.img}}" alt="Category name">
+            <div *ngIf="i % 2 == 1" class="category-name">
+                {{item.name}}
+            </div>
+        </div>
+    </div>
 </div>
