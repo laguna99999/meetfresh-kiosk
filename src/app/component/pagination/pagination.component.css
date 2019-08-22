@@ -5,14 +5,12 @@
     min-height: 100%;
     position: relative;
 }
-.pager .header{
-    height: 94px;
-    background-image: url('/assets/img/3.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+.pager .header img{
+    width: 100%;
 }
 .pager .sub-header img{
     height: 40px;
+    margin-top: 10px;
 }
 .pager h1{
     margin-bottom: 15px;
@@ -39,7 +37,9 @@
     text-align: center;
 }
 .pager .numbers .line button{
-    display: inline-block;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
     font-family: 'texgyreadventor', sans-serif;
     font-size: 45px;
     width: 33.33%;
