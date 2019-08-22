@@ -6,7 +6,7 @@
     justify-content: space-around;
     align-items: flex-start;
     background-color: #eee;
-    min-height: 100vh;
+    min-height: 100%;
 }
 .category .category-item{
     position: relative;
@@ -20,4 +20,9 @@
     padding-bottom: 10px;
     text-align: center;
     color: white;
+}
+.category .sbm{
+    font-size: 10px;
+    bottom: 0;
+    line-height: 25px;
 }

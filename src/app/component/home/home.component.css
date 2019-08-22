@@ -50,3 +50,13 @@
     font-family: 'texgyreadventor';
     border: 1px solid white;
 }
+.home .sbm{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    line-height: 25px;
+}
