@@ -3,7 +3,7 @@
     height: 100%;
 }
 .home .background{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
     bottom: 0;
     min-height: 94px;
     height: calc(100vh - 630px);
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;

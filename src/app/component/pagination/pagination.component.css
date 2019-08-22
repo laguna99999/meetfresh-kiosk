@@ -1,5 +1,6 @@
 .pager{
     color: #424242;
+    background-color: #eee;
     text-align: center;
     height: 100vh;
     position: relative;
@@ -20,7 +21,7 @@
     text-align: center;
 }
 .pager .page_number{
-    width: 60vw;
+    width: 60%;
     margin: 0 auto;
     font-size: 35px;
     text-align: center;
@@ -28,7 +29,7 @@
     margin-bottom: 25px;
 }
 .pager .numbers{
-    width: 60vw;
+    width: 60%;
     margin-bottom: 30px;
     margin: 0 auto;
 }

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
         if(window.innerWidth < 450){
             this.logo = "assets/img/logo.png";
         }else{
-            this.logo = "assets/img/logo-big.png";
+            this.logo = "assets/img/logo.png";
         }
     }
 }

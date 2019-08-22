@@ -5,12 +5,14 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    background-color: #eee;
+    min-height: 100vh;
 }
 .category .category-item{
     position: relative;
 }
 .category .category-item img{
-    width: 44vw;
+    width: 180px;
 }
 .category .category-item .category-name{
     margin-bottom: 10px;
