@@ -11,27 +11,27 @@
     </div>
     <div class="numbers">
         <div class="line">
-            <button type="button" matRipple (click)="number(1)">1</button>
-            <button type="button" matRipple (click)="number(2)">2</button>
-            <button type="button" matRipple (click)="number(3)">3</button>
+            <div matRipple (click)="number(1)">1</div>
+            <div matRipple (click)="number(2)">2</div>
+            <div matRipple (click)="number(3)">3</div>
         </div>
         <div class="line">
-            <button type="button" matRipple (click)="number(4)">4</button>
-            <button type="button" matRipple (click)="number(5)">5</button>
-            <button type="button" matRipple (click)="number(6)">6</button>
+            <div matRipple (click)="number(4)">4</div>
+            <div matRipple (click)="number(5)">5</div>
+            <div matRipple (click)="number(6)">6</div>
         </div>
         <div class="line">
-            <button type="button" matRipple (click)="number(7)">7</button>
-            <button type="button" matRipple (click)="number(8)">8</button>
-            <button type="button" matRipple (click)="number(9)">9</button>
+            <div matRipple (click)="number(7)">7</div>
+            <div matRipple (click)="number(8)">8</div>
+            <div matRipple (click)="number(9)">9</div>
         </div>
         <div class="line">
-            <button type="button" matRipple disabled> </button>
-            <button type="button" matRipple (click)="number(0)">0</button>
-            <button type="button" matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></button>
+            <div matRipple disabled> </div>
+            <div matRipple (click)="number(0)">0</div>
+            <div matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></div>
         </div>
     </div>
-    <button type="button" class="confirm" matRipple (click)="enter()">Enter</button>
+    <button class="confirm" matRipple (click)="enter()">Enter</button>
     <div class="help" (click)="help()">
         <mat-icon matRipple aria-hidden="false" aria-label="MeatFresh help">help</mat-icon>
     </div>

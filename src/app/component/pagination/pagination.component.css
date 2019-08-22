@@ -36,8 +36,7 @@
     justify-content: space-around;
     text-align: center;
 }
-.pager .numbers .line button{
-    display: block;
+.pager .numbers .line div{
     text-align: center;
     margin: 0 auto;
     font-family: 'texgyreadventor', sans-serif;
@@ -49,7 +48,7 @@
     outline: none;
     color: #424242;
 }
-.pager .numbers .line button mat-icon{
+.pager .numbers .line div mat-icon{
     font-size: 33px;
     width: 33px;
     height: 33px;
