@@ -36,9 +36,10 @@
 .pager .numbers .line{
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 .pager .numbers .line button{
-    text-align: center;
+    display: inline-block;
     font-family: 'texgyreadventor', sans-serif;
     font-size: 45px;
     width: 33.33%;
