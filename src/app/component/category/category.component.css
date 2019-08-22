@@ -12,7 +12,8 @@
     position: relative;
 }
 .category .category-item img{
-    width: 180px;
+    max-width: 180px;
+    width: 44vw;
 }
 .category .category-item .category-name{
     margin-bottom: 10px;
