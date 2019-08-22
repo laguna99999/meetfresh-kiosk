@@ -1,9 +1,13 @@
 .home{
-    background-color: black;
-    background-image: url('/assets/img/home-background.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
     height: 100%;
+}
+.home .background{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 .home .logo{
     width: 100%;
@@ -25,10 +29,11 @@
     margin: 0 40px;
 }
 .home .footer{
-    position: fixed;
+    position: absolute;
+    background-color: black;
     bottom: 0;
     min-height: 94px;
-    height: calc(100vh - 662px);
+    height: calc(100vh - 630px);
     width: 100vw;
     display: flex;
     justify-content: space-around;
