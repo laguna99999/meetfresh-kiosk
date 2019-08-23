@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
+import { GlobalService } from '../../service/global.service';
 @Component({
     selector: 'app-category',
     templateUrl: './category.component.html',
@@ -17,6 +18,7 @@ export class CategoryComponent implements OnInit {
         private router: Router,
 		private route: ActivatedRoute,
         private api: ApiService,
+        private global: GlobalService,
     ) { }
 
     ngOnInit() {
@@ -36,9 +38,13 @@ export class CategoryComponent implements OnInit {
         this.subscriber.unsubscribe();
     }
 
+    setCurrent(item: any){
+        this.global.current_category = item;
+    }
+
     private handleResponse(data){
         this.category = data.category.filter(item => {
-            return (item.id > (this.param - 1) * 8 - 1) && (item.id < this.param * 8)
+            return (item.id > (this.param - 1) * 12 - 1) && (item.id < this.param * 12)
         });
     }
     private handleError(error){

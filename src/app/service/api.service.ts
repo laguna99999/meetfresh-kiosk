@@ -15,7 +15,7 @@ export class ApiService {
     public get_categories(page: string){
         return this.http.get(`${this.baseURL}category.json`);
     }
-    public product(){
+    public get_products(){
         return this.http.get(`${this.baseURL}product.json`);
     }
 }

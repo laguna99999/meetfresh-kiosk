@@ -1,0 +1,100 @@
+.list{
+    position: relative;
+    height: 100%;
+}
+.list .header{
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    max-width: 480px;
+}
+.list .header .category_name{
+    font-size: 40px;
+    font-family: 'cookie', cursive;
+    margin: 0;
+    text-align: center;
+}
+.list .header .bread_crumb{
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+}
+.list .products{
+    background-color: white;
+    height: 100%;
+    min-height: 731px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.list .products .product{
+    width: 25vw;
+    max-width: 100px;
+    height: 16vh;
+    min-height: 125px;
+    margin: 3px;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.list .products .product img{
+    width: 80%;
+    margin: 3px 0;
+}
+.list .products .product .product_description{
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.list .products .product .product_description p{
+    font-size: 8px;
+    margin: 0;
+    left: 0;
+}
+.list .products .product .product_description button{
+    font-size: 10px;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+.list .footer{
+    position: fixed;
+    bottom: 0;
+    height: 94px;
+    background-color: black;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list .footer button{
+    background: transparent;
+    color: white;
+    padding: 0 20px;
+    line-height: 40px;
+    outline: none;
+    font-family: 'texgyreadventor';
+    border: 1px solid white;
+    font-size: 17px;
+}
+.list .sbm{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    line-height: 25px;
+}

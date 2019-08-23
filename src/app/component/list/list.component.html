@@ -1,1 +1,28 @@
-<p>list works!</p>
+<div class="list">
+    <div class="header">
+        <p class="category_name" [ngStyle]="{color: global.current_category.color}">{{global.current_category.name}}</p>
+        <p class="bread_crumb">Taro Ball / Grass Jelly / Pruple Rice Soup / Tofu Pudding</p>
+    </div>
+    <div class="products">
+        <div class="product" *ngFor="let product of products">
+            <img src="{{product.img}}" alt="Images for category">
+            <img src="assets/img/1.png" alt="Images for separator">
+            <div class="product_description">
+                <div>
+                    <p>{{product.name}}</p>
+                    <p>#{{product.id}}</p>
+                </div>
+                <button type="button" name="button" (click)="add(product.id)">ADD</button>
+            </div>
+        </div>
+    </div>
+    <div class="navigator">
+
+    </div>
+    <div class="footer">
+        <button type="button" name="button" (click)="menu()">Menu</button>
+    </div>
+    <div class="sbm">
+        Powered By SBM Technology Corp
+    </div>
+</div>
