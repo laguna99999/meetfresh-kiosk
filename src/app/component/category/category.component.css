@@ -5,8 +5,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: #eee;
     min-height: 100%;
+}
+.category .background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .category .category-item{
     position: relative;
@@ -22,6 +27,7 @@
     color: white;
 }
 .category .sbm{
+    position: fixed;
     font-size: 10px;
     bottom: 0;
     line-height: 25px;

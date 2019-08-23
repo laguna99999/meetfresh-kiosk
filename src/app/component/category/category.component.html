@@ -1,4 +1,5 @@
 <div class="category">
+    <img class="background" src="assets/img/background.png" alt="MeetFresh background">
     <div class="wrap">
         <div class="category-item" *ngFor="let item of category; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="list/{{item.id}}">
             <img *ngIf="i % 2 == 0" src="{{item.img}}" alt="Category name">

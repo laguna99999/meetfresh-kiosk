@@ -1,16 +1,31 @@
 .pager{
     color: #424242;
-    background-color: #eee;
     text-align: center;
     min-height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.pager .background{
+    position: fixed;
+    width: 100%;
+    top: 94px;
+    left: 0;
+    z-index: -1;
 }
 .pager .header img{
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 94px;
 }
 .pager .sub-header img{
     height: 40px;
-    margin-top: 10px;
+    margin-top: 104px;
 }
 .pager h1{
     margin-bottom: 15px;
