@@ -18,7 +18,7 @@ export class CategoryComponent implements OnInit {
         private router: Router,
 		private route: ActivatedRoute,
         private api: ApiService,
-        private global: GlobalService,
+        public global: GlobalService,
     ) { }
 
     ngOnInit() {
