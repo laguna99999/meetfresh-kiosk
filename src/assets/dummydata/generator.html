@@ -76,63 +76,63 @@
                 {
                     "id": 1,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p1.png",
+                    "img": "/assets/img/p1.png"
                 },
                 {
                     "id": 2,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p2.png",
+                    "img": "/assets/img/p2.png"
                 },
                 {
                     "id": 3,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p3.png",
+                    "img": "/assets/img/p3.png"
                 },
                 {
                     "id": 4,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p4.png",
+                    "img": "/assets/img/p4.png"
                 },
                 {
                     "id": 5,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p5.png",
+                    "img": "/assets/img/p5.png"
                 },
                 {
                     "id": 6,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p6.png",
+                    "img": "/assets/img/p6.png"
                 },
                 {
                     "id": 7,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p7.png",
+                    "img": "/assets/img/p7.png"
                 },
                 {
                     "id": 8,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p8.png",
+                    "img": "/assets/img/p8.png"
 
                 },
                 {
                     "id": 9,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p9.png",
+                    "img": "/assets/img/p9.png"
                 },
                 {
                     "id": 10,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p10.png",
+                    "img": "/assets/img/p10.png"
                 },
                 {
                     "id": 11,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p11.png",
+                    "img": "/assets/img/p11.png"
                 },
                 {
                     "id": 12,
                     "name": "Taro Ball",
-                    "img": "/assets/img/p12.png",
+                    "img": "/assets/img/p12.png"
 
                 }
             ];
@@ -142,7 +142,8 @@
             		"id": i,
             		"name": test_data[i % 12].name,
             		"img": test_data[i % 12].img,
-                    "category_id": i % 160
+                    "category_id": i % 160,
+                    "price": Math.floor(Math.random() * 100, 2) / 10
             	}
             	result.push(template);
             }
