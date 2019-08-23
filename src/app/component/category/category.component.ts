@@ -26,7 +26,7 @@ export class CategoryComponent implements OnInit {
     }
 
     ngAfterViewInit(){
-        return this.api.category().subscribe(
+        return this.api.get_categories().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
         );
@@ -37,7 +37,9 @@ export class CategoryComponent implements OnInit {
     }
 
     private handleResponse(data){
-        this.category = data.category;
+        this.category = data.category.filter(item => {
+            return (item.id > (this.param - 1) * 8 - 1) && (item.id < this.param * 8)
+        });
     }
     private handleError(error){
         this.error = error.message;

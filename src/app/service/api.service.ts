@@ -12,7 +12,7 @@ export class ApiService {
         private http: HttpClient
     ) { }
 
-    public category(){
+    public get_categories(page: string){
         return this.http.get(`${this.baseURL}category.json`);
     }
     public product(){

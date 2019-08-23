@@ -23,6 +23,9 @@
     color: white;
 }
 .category .sbm{
+    width: 100%;
+    text-align: center;
+    background-color: #efefef;
     position: fixed;
     font-size: 10px;
     bottom: 0;
