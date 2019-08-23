@@ -9,7 +9,7 @@ import { GlobalService } from '../../service/global.service';
 })
 export class ListComponent implements OnInit {
 
-    param: number;
+    param: number = -1;
     subscriber: any;
 
     products: any;
@@ -22,9 +22,11 @@ export class ListComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.subscriber = this.route.params.subscribe(params => {
-			this.param = +params['param']; // (+) converts string 'param' to a number
-		});
+        if(this.param == -1){
+            this.subscriber = this.route.params.subscribe(params => {
+    			this.param = +params['param']; // (+) converts string 'param' to a number
+    		});
+        }
         // For test dummy data
         if(!this.global.current_category){
             this.global.current_category = {
@@ -43,11 +45,19 @@ export class ListComponent implements OnInit {
         );
     }
 
-    add(id: number){
-        console.log(id);
+    add(tag: any, item: any){
+
     }
     menu(){
-        
+        this.router.navigate(['/category/' + this.global.pager_category]);
+    }
+    previous(){
+        this.param -= 1;
+        this.ngAfterViewInit();
+    }
+    next(){
+        this.param += 1;
+        this.ngAfterViewInit();
     }
     private handleResponse(data){
         this.products = data.product.filter(item => {

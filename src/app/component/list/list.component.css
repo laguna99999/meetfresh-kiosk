@@ -45,6 +45,18 @@
     flex-direction: column;
     justify-content: center;
 }
+.list .products .navigator{
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+.list .products .navigator mat-icon{
+    cursor: pointer;
+}
+.list .products .navigator .previous{
+    transform: scale(-1);
+}
 .list .products .product img{
     width: 80%;
     margin: 3px 0;

@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
         this.subscriber = this.route.params.subscribe(params => {
 			this.param = +params['param']; // (+) converts string 'param' to a number
 		});
+        this.global.pager_category = this.param;
     }
 
     ngAfterViewInit(){

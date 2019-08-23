@@ -12,8 +12,12 @@
                     <p>{{product.name}}</p>
                     <p>#{{product.id}}</p>
                 </div>
-                <button type="button" name="button" (click)="add(product.id)">ADD</button>
+                <button type="button" name="button" (click)="add($event, product)">ADD</button>
             </div>
+        </div>
+        <div class="navigator">
+            <mat-icon class="previous" (click)="previous()">play_arrow</mat-icon>
+            <mat-icon class="next" (click)="next()">play_arrow</mat-icon>
         </div>
     </div>
     <div class="navigator">
