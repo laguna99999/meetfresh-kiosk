@@ -5,13 +5,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    background-color: #efefef;
+    min-height: 100%;
 }
-.category .background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+
 .category .category-item{
     position: relative;
 }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dummydata generator</title>
+    </head>
+    <body>
+        <button type="button" name="button" onclick="generate_category()">Category</button>
+        <button type="button" name="button" onclick="generate_product()">Product</button>
+        <div id="result">
+
+        </div>
+    </body>
+    <script type="text/javascript">
+        let generate_category = () => {
+            let test_data = [
+                {
+            		"name": "Cold Dessert",
+                    "img": "/assets/img/c1.png",
+                    "color": "#94b0c2"
+            	},
+            	{
+                    "name": "Hot Dessert",
+                    "img": "/assets/img/c2.png",
+                    "color": "#f29197"
+                },
+                {
+                    "name": "Cold Drink",
+                    "img": "/assets/img/c3.png",
+                    "color": "#99c9c1"
+                },
+                {
+                    "name": "Hot Drink",
+                    "img": "/assets/img/c4.png",
+                    "color": "#bf6e7d"
+                },
+                {
+                    "name": "Shaved Ice",
+                    "img": "/assets/img/c5.png",
+                    "color": "#b4bc93"
+                },
+                {
+                    "name": "Small Bite",
+                    "img": "/assets/img/c6.png",
+                    "color": "#f0cb6a"
+                },
+                {
+                    "name": "Create your own",
+                    "img": "/assets/img/c7.png",
+                    "color": "#f0c99e"
+                },
+                {
+                    "name": "Promotion",
+                    "img": "/assets/img/c8.png",
+                    "color": "#806966"
+                }
+            ];
+            let result = [];
+            for(let i = 0; i < 160; i++){
+            	let template = {
+            		"id": i,
+            		"name": test_data[i % 8].name,
+            		"img": test_data[i % 8].img,
+            		"color": test_data[i % 8].color
+            	}
+            	result.push(template);
+            }
+            let final = {
+                "category": result
+            }
+            document.getElementById('result').innerText = JSON.stringify(final);
+        }
+
+        let generate_product = () => {
+            let test_data = [
+                {
+                    "id": 1,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p1.png",
+                },
+                {
+                    "id": 2,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p2.png",
+                },
+                {
+                    "id": 3,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p3.png",
+                },
+                {
+                    "id": 4,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p4.png",
+                },
+                {
+                    "id": 5,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p5.png",
+                },
+                {
+                    "id": 6,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p6.png",
+                },
+                {
+                    "id": 7,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p7.png",
+                },
+                {
+                    "id": 8,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p8.png",
+
+                },
+                {
+                    "id": 9,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p9.png",
+                },
+                {
+                    "id": 10,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p10.png",
+                },
+                {
+                    "id": 11,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p11.png",
+                },
+                {
+                    "id": 12,
+                    "name": "Taro Ball",
+                    "img": "/assets/img/p12.png",
+
+                }
+            ];
+            let result = [];
+            for(let i = 0; i < 160 * 12; i++){
+            	let template = {
+            		"id": i,
+            		"name": test_data[i % 12].name,
+            		"img": test_data[i % 12].img,
+                    "category_id": i % 160
+            	}
+            	result.push(template);
+            }
+            let final = {
+                "product": result
+            }
+            document.getElementById('result').innerText = JSON.stringify(final);
+        }
+    </script>
+</html>
