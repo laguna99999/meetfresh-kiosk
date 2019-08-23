@@ -1,0 +1,52 @@
+{
+    "category": [
+        {
+            "id": 1,
+            "name": "Taro Ball",
+            "img": "/assets/img/p1.png",
+            
+        },
+        {
+            "id": 2,
+            "name": "Taro Ball",
+            "img": "/assets/img/p2.png",
+            
+        },
+        {
+            "id": 3,
+            "name": "Taro Ball",
+            "img": "/assets/img/p3.png",
+            
+        },
+        {
+            "id": 4,
+            "name": "Taro Ball",
+            "img": "/assets/img/p4.png",
+            
+        },
+        {
+            "id": 5,
+            "name": "Taro Ball",
+            "img": "/assets/img/p5.png",
+            
+        },
+        {
+            "id": 6,
+            "name": "Taro Ball",
+            "img": "/assets/img/p6.png",
+            
+        },
+        {
+            "id": 7,
+            "name": "Taro Ball",
+            "img": "/assets/img/p7.png",
+            
+        },
+        {
+            "id": 8,
+            "name": "Taro Ball",
+            "img": "/assets/img/p8.png",
+            
+        }
+    ]
+}

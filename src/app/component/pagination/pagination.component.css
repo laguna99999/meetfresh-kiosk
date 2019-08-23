@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 .pager .background{
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 94px;
     left: 0;

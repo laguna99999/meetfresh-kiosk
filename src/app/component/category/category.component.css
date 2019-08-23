@@ -5,10 +5,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    min-height: 100%;
 }
 .category .background{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
