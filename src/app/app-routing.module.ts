@@ -5,11 +5,17 @@ import { HomeComponent } from './component/home/home.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
 import { CategoryComponent } from './component/category/category.component';
 import { ListComponent } from './component/list/list.component';
+import { CustomizeComponent } from './component/customize/customize.component';
+import { ConfirmComponent } from './component/confirm/confirm.component';
+import { EndComponent } from './component/end/end.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'pager', component: PaginationComponent },
     { path: 'category/:param', component: CategoryComponent },
     { path: 'list/:param', component: ListComponent },
+    { path: 'customize', component: CustomizeComponent },
+    { path: 'confirm', component: ConfirmComponent },
+    { path: 'end', component: EndComponent },
     { path: '**', redirectTo: '' },
 ];
 

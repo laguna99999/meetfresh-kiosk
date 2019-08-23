@@ -1,7 +1,12 @@
 <div class="list">
     <div class="header">
         <p class="category_name" [ngStyle]="{color: global.current_category.color}">{{global.current_category.name}}</p>
-        <p class="bread_crumb">Taro Ball / Grass Jelly / Pruple Rice Soup / Tofu Pudding</p>
+        <p class="bread_crumb" >
+            <span *ngFor="let item of global.current_products; let i = index">
+                {{item.name}}
+                <span *ngIf="i != (global.current_products.length - 1)"> / </span>
+            </span>
+        </p>
     </div>
     <div class="products">
         <div class="product" *ngFor="let product of products">
@@ -10,7 +15,7 @@
             <div class="product_description">
                 <div>
                     <p>{{product.name}}</p>
-                    <p>#{{product.id}}</p>
+                    <p>$ {{product.price}}</p>
                 </div>
                 <button type="button" name="button" (click)="add($event, product)">ADD</button>
             </div>
@@ -24,7 +29,8 @@
 
     </div>
     <div class="footer">
-        <button type="button" name="button" (click)="menu()">Menu</button>
+        <button type="button" name="button" (click)="back()">Back</button>
+        <button type="button" name="button" (click)="confirm()">Confirm</button>
     </div>
     <div class="sbm">
         Powered By SBM Technology Corp

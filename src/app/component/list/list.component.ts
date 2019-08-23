@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
 import { GlobalService } from '../../service/global.service';
+import { Location } from '@angular/common';
 @Component({
     selector: 'app-list',
     templateUrl: './list.component.html',
@@ -19,6 +20,7 @@ export class ListComponent implements OnInit {
 		private route: ActivatedRoute,
         private api: ApiService,
         public global: GlobalService,
+        private location: Location
     ) { }
 
     ngOnInit() {
@@ -46,10 +48,24 @@ export class ListComponent implements OnInit {
     }
 
     add(tag: any, item: any){
-
+        tag.target.classList.toggle('selected');
+        if(tag.target.classList.contains('selected')){
+            tag.target.innerText = "X";
+            this.global.current_products.push(item);
+        }else{
+            tag.target.innerText = "ADD";
+            this.global.current_products = this.global.current_products.filter(_item => {
+                return _item.id != item.id
+            })
+        }
     }
-    menu(){
-        this.router.navigate(['/category/' + this.global.pager_category]);
+    confirm(){
+        if(this.global.current_products.length > 0){
+            this.router.navigate(['/customize']);
+        }
+    }
+    back(){
+        this.location.back();
     }
     previous(){
         this.param -= 1;

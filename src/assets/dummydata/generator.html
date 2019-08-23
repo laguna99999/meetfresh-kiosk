@@ -80,27 +80,27 @@
                 },
                 {
                     "id": 2,
-                    "name": "Taro Ball",
+                    "name": "Grass Jelly",
                     "img": "/assets/img/p2.png"
                 },
                 {
                     "id": 3,
-                    "name": "Taro Ball",
+                    "name": "Purple Rice Soup",
                     "img": "/assets/img/p3.png"
                 },
                 {
                     "id": 4,
-                    "name": "Taro Ball",
+                    "name": "Tofu Pudding",
                     "img": "/assets/img/p4.png"
                 },
                 {
                     "id": 5,
-                    "name": "Taro Ball",
+                    "name": "Icy Grass Jelly",
                     "img": "/assets/img/p5.png"
                 },
                 {
                     "id": 6,
-                    "name": "Taro Ball",
+                    "name": "Double Taro",
                     "img": "/assets/img/p6.png"
                 },
                 {
@@ -140,8 +140,8 @@
             for(let i = 0; i < 160 * 12; i++){
             	let template = {
             		"id": i,
-            		"name": test_data[i % 12].name,
-            		"img": test_data[i % 12].img,
+            		"name": test_data[Math.floor(Math.random() * 160) % 12].name,
+            		"img": test_data[Math.floor(Math.random() * 160) % 12].img,
                     "category_id": i % 160,
                     "price": Math.floor(Math.random() * 100, 2) / 10
             	}

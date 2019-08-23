@@ -63,17 +63,20 @@
 }
 .list .products .product .product_description{
     width: 80%;
+    height: 30px;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 .list .products .product .product_description p{
-    font-size: 8px;
+    font-size: 7px;
+    width: 45px;
     margin: 0;
     left: 0;
 }
 .list .products .product .product_description button{
     font-size: 10px;
+    height: 21px;
     background: black;
     color: white;
     border: none;
@@ -87,7 +90,7 @@
     width: 100%;
     max-width: 480px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .list .footer button{
@@ -109,4 +112,9 @@
     width: 100%;
     max-width: 450px;
     line-height: 25px;
+}
+.list .selected{
+    background-color: #ddd !important;
+    color: red !important;
+    font-weight: 900;
 }

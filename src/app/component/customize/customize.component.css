@@ -1,0 +1,237 @@
+.customize{
+    position: relative;
+    height: 100%;
+}
+.customize .background{
+    width: 100%;
+    max-width: 480px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.customize .header{
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    max-width: 480px;
+}
+.customize .header .customize_name{
+    font-size: 40px;
+    font-family: 'cookie', cursive;
+    margin: 0;
+    text-align: center;
+}
+.customize .header .bread_crumb{
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+}
+.customize .box{
+    width: 80%;
+    height: 100%;
+    min-height: 731px;
+    min-width: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.customize .box .order{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    margin-bottom: 8px;
+}
+.customize .box .order>img{
+    width: 110px;
+    height: 110px;
+}
+.customize .box .order .description{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+}
+.customize .box .order .description p{
+    margin: 0;
+}
+.customize .box .order .description .name{
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 33px;
+}
+.customize .box .order .description .separator{
+    width: 100%;
+    text-align: center;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+.customize .box .order .description .separator img{
+    width: 100px;
+}
+.customize .box .order .description .names{
+    font-size: 9px;
+    max-width: 150px;
+    line-height: 9px;
+}
+.customize .box .order .description .names span{
+    cursor: pointer;
+}
+.customize .box .order .description .specification{
+    font-size: 8px;
+    color: red;
+    position: absolute;
+    left: 180px;
+    bottom: 20px;
+}
+.customize .box .order .description .price{
+    position: absolute;
+    font-size: 13px;
+    right: 10px;
+    bottom: 5px;
+}
+
+.customize .box .topping{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    margin-bottom: 8px;
+}
+.customize .box .topping .topping_price{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.customize .box .topping .topping_price p{
+    color: #eb9239;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.customize .box .topping .topping_content{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+.customize .box .topping .topping_lists{
+    color: #353535;
+}
+.customize .box .topping .topping_lists .topping_list{
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 4px 0;
+}
+.customize .box .topping .topping_lists .topping_list .item{
+    font-size: 8px;
+    cursor: pointer;
+    text-align: right;
+    max-width: 68px;
+}
+.customize .box .topping .topping_lists .topping_list .count{
+    border: 1px solid #aaa;
+    font-size: 10px;
+    width: 30px;
+    line-height: 13px;
+    text-align: center;
+}
+.customize .box .topping .topping_lists .topping_list mat-icon{
+    font-size: 12px;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.customize .box .level{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.27);
+}
+.customize .box .level .level_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.customize .box .level .level_title p{
+    color: #eb9239;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.customize .box .level .level_content{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    color: #353535;
+}
+.customize .box .level .level_content .level_list{
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 9px;
+}
+.customize .box .level .level_content .level_list mat-icon{
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+.customize .footer{
+    position: fixed;
+    bottom: 0;
+    height: 94px;
+    background-color: black;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.customize .footer button{
+    background: transparent;
+    color: white;
+    padding: 0 20px;
+    line-height: 40px;
+    outline: none;
+    font-family: 'texgyreadventor';
+    border: 1px solid white;
+    font-size: 17px;
+}
+.customize .sbm{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    line-height: 25px;
+}

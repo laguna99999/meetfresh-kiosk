@@ -1,0 +1,49 @@
+.confirm{
+    position: relative;
+    height: 100%;
+}
+.confirm .header{
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    max-width: 480px;
+}
+.confirm .header .confirm_name{
+    font-size: 40px;
+    font-family: 'cookie', cursive;
+    margin: 0;
+    text-align: center;
+}
+
+
+.confirm .footer{
+    position: fixed;
+    bottom: 0;
+    height: 94px;
+    background-color: black;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirm .footer button{
+    background: transparent;
+    color: white;
+    padding: 0 20px;
+    line-height: 40px;
+    outline: none;
+    font-family: 'texgyreadventor';
+    border: 1px solid white;
+    font-size: 17px;
+}
+.confirm .sbm{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    line-height: 25px;
+}
