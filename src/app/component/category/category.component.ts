@@ -22,10 +22,6 @@ export class CategoryComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.subscriber = this.route.params.subscribe(params => {
-			this.param = +params['param']; // (+) converts string 'param' to a number
-		});
-        this.global.pager_category = this.param;
     }
 
     ngAfterViewInit(){
@@ -36,7 +32,7 @@ export class CategoryComponent implements OnInit {
     }
 
     ngOnDestroy(){
-        this.subscriber.unsubscribe();
+        
     }
 
     setCurrent(item: any){
@@ -44,9 +40,7 @@ export class CategoryComponent implements OnInit {
     }
 
     private handleResponse(data){
-        this.category = data.category.filter(item => {
-            return (item.id > (this.param - 1) * 12 - 1) && (item.id < this.param * 12)
-        });
+        this.category = data.category;
     }
     private handleError(error){
         this.error = error.message;

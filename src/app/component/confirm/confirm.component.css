@@ -18,12 +18,66 @@
     height: 75%;
     top: 0;
     left: 0;
-    margin-top: 18%;
+    margin-top: 20%;
     margin-left: 10%;
+}
+.confirm .box table {
+    text-align: center;
+    border-spacing: 0;
+    width: 100%;
+    height: 90%;
 }
 .confirm .box table thead tr td{
     color: #eb9239;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #aaa;
+    line-height: 40px;
+    font-size: 15px;
+}
+.confirm .box table tbody .action{
+    vertical-align: top;
+}
+.confirm .box table tbody .action mat-icon{
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    color: #eb9239;
+}
+.confirm .box table tbody .topping, .confirm .box table tbody .item{
+    font-size: 10px;
+    vertical-align: top;
+}
+.confirm .box table tbody .item p{
+    text-align: left;
+    margin: 3px 10px;
+}
+.confirm .box table tbody .topping p{
+    text-align: center;
+    margin: 3px auto;
+}
+.confirm .box table tbody .quantity{
+    vertical-align: top;
+}
+.confirm .box table tbody .quantity span{
+    font-size: 15px;
+    margin: 0 15px;
+}
+.confirm .box table tbody .quantity mat-icon{
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.confirm .box table tbody .price{
+    vertical-align: top;
+    font-size: 15px;
+}
+.confirm .box .total{
+    float: right;
+    color: #eb9239;
+    margin-top: 15px;
+}
+.confirm .box .total span{
+    color: #999;
 }
 .confirm .header{
     position: absolute;

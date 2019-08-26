@@ -11,7 +11,7 @@ import { EndComponent } from './component/end/end.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'pager', component: PaginationComponent },
-    { path: 'category/:param', component: CategoryComponent },
+    { path: 'category', component: CategoryComponent },
     { path: 'list/:param', component: ListComponent },
     { path: 'customize', component: CustomizeComponent },
     { path: 'confirm', component: ConfirmComponent },

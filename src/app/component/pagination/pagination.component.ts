@@ -27,11 +27,7 @@ export class PaginationComponent implements OnInit {
     }
 
     enter(){
-        if(this.page_number > 0 && this.page_number < 30){
-            this.router.navigate(['category', this.page_number]);
-        }else{
-            //Exception
-        }
+        this.router.navigate(['category']);
     }
 
     help(){
