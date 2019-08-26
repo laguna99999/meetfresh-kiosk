@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
 
     param: number = -1;
     subscriber: any;
-
+    product_ids: any;
     products: any;
     error: string;
     constructor(
@@ -38,9 +38,16 @@ export class ListComponent implements OnInit {
                 color: "#94b0c2"
             }
         }
+
+        if(this.global.current_products.length > 0){
+            this.product_ids = this.global.current_products.map(item => {
+                return item.id
+            })
+        }
     }
 
     ngAfterViewInit(){
+
         return this.api.get_products().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
@@ -49,9 +56,18 @@ export class ListComponent implements OnInit {
 
     add(tag: any, item: any){
         tag.target.classList.toggle('selected');
+
+        tag.target.innerText = "X";
+        this.global.current_products.push(item);
+
+        this.router.navigate(['/customize']);
+    }
+    remove(tag: any, item: any){
+        tag.target.classList.toggle('selected');
         if(tag.target.classList.contains('selected')){
             tag.target.innerText = "X";
             this.global.current_products.push(item);
+            this.router.navigate(['/customize']);
         }else{
             tag.target.innerText = "ADD";
             this.global.current_products = this.global.current_products.filter(_item => {
@@ -61,7 +77,7 @@ export class ListComponent implements OnInit {
     }
     confirm(){
         if(this.global.current_products.length > 0){
-            this.router.navigate(['/customize']);
+            this.router.navigate(['/confirm']);
         }
     }
     back(){
@@ -79,9 +95,6 @@ export class ListComponent implements OnInit {
         this.products = data.product.filter(item => {
             return (item.category_id == this.param);
         });
-        if(this.global.current_products.length > 0){
-            
-        }
     }
     private handleError(error){
         this.error = error.message;

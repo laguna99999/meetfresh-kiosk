@@ -3,7 +3,7 @@
         <div class="category-item" *ngFor="let item of category; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="/list/{{item.id}}" (click)="setCurrent(item)">
             <img *ngIf="i % 2 == 0" src="{{item.img}}" alt="Category name">
             <p *ngIf="i % 2 == 0" class="category-name">
-                {{item.name}}({{item.id}})
+                {{item.name}}
             </p>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="category-item" *ngFor="let item of category; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="/list/{{item.id}}" (click)="setCurrent(item)">
             <img *ngIf="i % 2 == 1" src="{{item.img}}" alt="Category name">
             <p *ngIf="i % 2 == 1" class="category-name">
-                {{item.name}}({{item.id}})
+                {{item.name}}
             </p>
         </div>
     </div>

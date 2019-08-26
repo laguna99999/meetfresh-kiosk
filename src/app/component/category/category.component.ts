@@ -30,11 +30,9 @@ export class CategoryComponent implements OnInit {
             error => this.handleError(error)
         );
     }
-
     ngOnDestroy(){
-        
-    }
 
+    }
     setCurrent(item: any){
         this.global.current_category = item;
     }

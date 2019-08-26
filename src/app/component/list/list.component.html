@@ -2,14 +2,19 @@
     <div class="header">
         <p class="category_name" [ngStyle]="{color: global.current_category.color}">{{global.current_category.name}}</p>
         <p class="bread_crumb" >
-            <span *ngFor="let item of global.current_products; let i = index">
-                {{item.name}}
-                <span *ngIf="i != (global.current_products.length - 1)"> / </span>
+            <span>
+                <span>Taro Ball</span> /
+                <span>Grass Jelly</span> /
+                <span>Purple RIce Soup</span> /
+                <span>Tofu Pudding</span>
             </span>
         </p>
     </div>
     <div class="products">
         <div class="product" *ngFor="let product of products">
+            <div class="product_id" style="display: none">
+                {{product.id}}
+            </div>
             <img src="{{product.img}}" alt="Images for category">
             <img src="assets/img/1.png" alt="Images for separator">
             <div class="product_description">
@@ -17,7 +22,8 @@
                     <p>{{product.name}}</p>
                     <p>$ {{product.price}}</p>
                 </div>
-                <button type="button" name="button" (click)="add($event, product)">ADD</button>
+                <button *ngIf="!((product_ids) ? (product_ids.includes(product.id)) : false)" type="button" name="button" (click)="add($event, product)">ADD</button>
+                <button class="selected" *ngIf="(product_ids) ? (product_ids.includes(product.id)) : false" type="button" name="button" (click)="remove($event, product)">X</button>
             </div>
         </div>
         <div class="navigator">

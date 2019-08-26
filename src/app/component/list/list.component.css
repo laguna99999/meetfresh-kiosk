@@ -73,6 +73,8 @@
     width: 45px;
     margin: 0;
     left: 0;
+    line-height: 7px;
+    padding: 2px 0;
 }
 .list .products .product .product_description button{
     font-size: 10px;
