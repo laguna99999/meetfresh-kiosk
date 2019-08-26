@@ -1,6 +1,40 @@
 <div class="confirm">
+    <img class="background" src="assets/img/background.png" alt="MeetFresh Confirm">
     <div class="header">
         <p class="confirm_name">Confirm Your Order</p>
+    </div>
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Item</td>
+                    <td>Topping</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><mat-icon>cancel</mat-icon></td>
+                    <td>
+                        <p>Taro Ball</p>
+                        <p>$2</p>
+                    </td>
+                    <td>
+                        <p>Red Bean * 1</p>
+                        <p>Red Bean * 1</p>
+                        <p>Red Bean * 1</p>
+                    </td>
+                    <td>
+                        <mat-icon>remove_circle</mat-icon>
+                        <span>1</span>
+                        <mat-icon>add_circle</mat-icon>
+                    </td>
+                    <td>9.80</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="footer">
         <button type="button" name="button" (click)="back()">Back</button>

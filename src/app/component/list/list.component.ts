@@ -79,6 +79,9 @@ export class ListComponent implements OnInit {
         this.products = data.product.filter(item => {
             return (item.category_id == this.param);
         });
+        if(this.global.current_products.length > 0){
+            
+        }
     }
     private handleError(error){
         this.error = error.message;
