@@ -69,14 +69,15 @@ export class ListComponent implements OnInit {
         tag.target.classList.toggle('selected');
         if(tag.target.classList.contains('selected')){
             tag.target.innerText = "X";
-            //this.global.current_products.push(item);
             this.selected_products.push(item);
+            this.local.set("selected_products", this.selected_products);
             this.router.navigate(['/customize']);
         }else{
             tag.target.innerText = "ADD";
             this.selected_products = this.selected_products.filter(_item => {
                 return _item.id != item.id
             })
+            this.local.set("selected_products", this.selected_products);
         }
     }
     confirm(){
