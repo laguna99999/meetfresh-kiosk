@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
-import { GlobalService } from '../../service/global.service';
+import { LocalstorageService } from '../../service/localstorage.service';
 @Component({
     selector: 'app-category',
     templateUrl: './category.component.html',
@@ -9,32 +8,22 @@ import { GlobalService } from '../../service/global.service';
 })
 export class CategoryComponent implements OnInit {
 
-    param: number;
-    subscriber: any;
-
     category: any;
     error: string;
+
     constructor(
-        private router: Router,
-		private route: ActivatedRoute,
         private api: ApiService,
-        public global: GlobalService,
+        public local: LocalstorageService
     ) { }
 
     ngOnInit() {
-    }
-
-    ngAfterViewInit(){
         return this.api.get_categories().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
         );
     }
-    ngOnDestroy(){
-
-    }
-    setCurrent(item: any){
-        this.global.current_category = item;
+    private setCurrentCategory(item: any){
+        this.local.set("category", item);
     }
 
     private handleResponse(data){
