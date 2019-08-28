@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
 import { GlobalService } from '../../service/global.service';
+import { LocalstorageService } from '../../service/localstorage.service';
 import { Location } from '@angular/common';
 @Component({
     selector: 'app-list',
@@ -12,42 +13,44 @@ export class ListComponent implements OnInit {
 
     param: number = -1;
     subscriber: any;
+
+    category: any;
+    sub_category_id: number = 0;
     product_ids: any;
+    all_products: any;
     products: any;
+
+    selected_products: any;
     error: string;
+
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
         private api: ApiService,
         public global: GlobalService,
+        public local: LocalstorageService,
         private location: Location
     ) { }
 
     ngOnInit() {
+        this.selected_products = [];
         if(this.param == -1){
             this.subscriber = this.route.params.subscribe(params => {
     			this.param = +params['param']; // (+) converts string 'param' to a number
     		});
         }
-        // For test dummy data
-        if(!this.global.current_category){
-            this.global.current_category = {
-                id: 1,
-                name: "Cold Dessert",
-                img: "/assets/img/c1.png",
-                color: "#94b0c2"
-            }
-        }
 
-        if(this.global.current_products.length > 0){
-            this.product_ids = this.global.current_products.map(item => {
+        this.category = this.local.get('category');
+        this.selected_products = [...this.local.get('selected_products')];
+
+        if(this.selected_products){
+            this.product_ids = this.selected_products.map(item => {
                 return item.id
             })
         }
     }
 
     ngAfterViewInit(){
-
         return this.api.get_products().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
@@ -56,27 +59,28 @@ export class ListComponent implements OnInit {
 
     add(tag: any, item: any){
         tag.target.classList.toggle('selected');
-
         tag.target.innerText = "X";
-        this.global.current_products.push(item);
 
+        this.selected_products.push(item);
+        this.local.set("selected_products", this.selected_products);
         this.router.navigate(['/customize']);
     }
     remove(tag: any, item: any){
         tag.target.classList.toggle('selected');
         if(tag.target.classList.contains('selected')){
             tag.target.innerText = "X";
-            this.global.current_products.push(item);
+            //this.global.current_products.push(item);
+            this.selected_products.push(item);
             this.router.navigate(['/customize']);
         }else{
             tag.target.innerText = "ADD";
-            this.global.current_products = this.global.current_products.filter(_item => {
+            this.selected_products = this.selected_products.filter(_item => {
                 return _item.id != item.id
             })
         }
     }
     confirm(){
-        if(this.global.current_products.length > 0){
+        if(this.selected_products.length > 0){
             this.router.navigate(['/confirm']);
         }
     }
@@ -84,20 +88,35 @@ export class ListComponent implements OnInit {
         this.location.back();
     }
     previous(){
-        this.param -= 1;
-        this.ngAfterViewInit();
+        this.sub_category_id -= 1;
+        if(this.sub_category_id == -1){
+            this.sub_category_id = this.global.sub_category.length - 1;
+        }
+        this.filterBySubCategory();
     }
     next(){
-        this.param += 1;
-        this.ngAfterViewInit();
+        this.sub_category_id += 1;
+        if(this.sub_category_id == this.global.sub_category.length){
+            this.sub_category_id = 0;
+        }
+        this.filterBySubCategory();
+    }
+    setSubCategory(id: number){
+        this.sub_category_id = id;
+        this.filterBySubCategory();
     }
     private handleResponse(data){
-        this.products = data.product.filter(item => {
+        this.all_products = data.product.filter(item => {
             return (item.category_id == this.param);
         });
+        this.filterBySubCategory();
     }
     private handleError(error){
         this.error = error.message;
     }
-
+    private filterBySubCategory(){
+        this.products = this.all_products.filter(item => {
+            return (item.sub_category_id == this.sub_category_id);
+        });
+    }
 }

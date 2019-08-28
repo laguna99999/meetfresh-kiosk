@@ -5,6 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
     public current_products: any = [];
+
+    public sub_category: any = [
+        {
+            id: 1,
+            name: "Taro Ball"
+        },
+        {
+            id: 2,
+            name: "Grass Jelly"
+        },
+        {
+            id: 3,
+            name: "Purple Rice Soup"
+        },
+        {
+            id: 4,
+            name: "Tofu Pudding"
+        }
+    ];
+
     public toppings: any = [
         "Almond Pudding",
         "Caramel Pudding",

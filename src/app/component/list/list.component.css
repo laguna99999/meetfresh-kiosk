@@ -14,10 +14,13 @@
     margin: 0;
     text-align: center;
 }
-.list .header .bread_crumb{
+.list .header .sub_category{
     font-size: 10px;
     text-align: center;
     margin: 0;
+}
+.list .header .sub_category span{
+    cursor: pointer;
 }
 .list .products{
     background-color: white;
