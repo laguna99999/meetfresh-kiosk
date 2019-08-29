@@ -1,49 +1,49 @@
 {
     "category": [
         {
-            "id": 0,
+            "id": 1,
             "name": "Cold Dessert",
             "img": "/assets/img/c1.png",
             "color": "#94b0c2"
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Hot Dessert",
             "img": "/assets/img/c2.png",
             "color": "#f29197"
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "Cold Drink",
             "img": "/assets/img/c3.png",
             "color": "#99c9c1"
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "Hot Drink",
             "img": "/assets/img/c4.png",
             "color": "#bf6e7d"
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "Shaved Ice",
             "img": "/assets/img/c5.png",
             "color": "#b4bc93"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Small Bite",
             "img": "/assets/img/c6.png",
             "color": "#f0cb6a"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Create your own",
             "img": "/assets/img/c7.png",
             "color": "#f0c99e"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "Promotion",
             "img": "/assets/img/c8.png",
             "color": "#806966"

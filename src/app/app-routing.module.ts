@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'pager', component: PaginationComponent },
     { path: 'category', component: CategoryComponent },
     { path: 'list/:param', component: ListComponent },
-    { path: 'customize', component: CustomizeComponent },
+    { path: 'customize/:param', component: CustomizeComponent },
     { path: 'confirm', component: ConfirmComponent },
     { path: 'end', component: EndComponent },
     { path: '**', redirectTo: '' },

@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
     subscriber: any;
 
     category: any;
-    sub_category_id: number = 0;
+    sub_category_id: number = 1;
     product_ids: any;
     all_products: any;
     products: any;
@@ -41,7 +41,10 @@ export class ListComponent implements OnInit {
         }
 
         this.category = this.local.get('category');
-        this.selected_products = [...this.local.get('selected_products')];
+
+        if(this.local.get('selected_products')){
+            this.selected_products = [...this.local.get('selected_products')];
+        }
 
         if(this.selected_products){
             this.product_ids = this.selected_products.map(item => {
@@ -63,7 +66,7 @@ export class ListComponent implements OnInit {
 
         this.selected_products.push(item);
         this.local.set("selected_products", this.selected_products);
-        this.router.navigate(['/customize']);
+        this.router.navigate(['/customize/' + item.id]);
     }
     remove(tag: any, item: any){
         tag.target.classList.toggle('selected');
@@ -71,7 +74,7 @@ export class ListComponent implements OnInit {
             tag.target.innerText = "X";
             this.selected_products.push(item);
             this.local.set("selected_products", this.selected_products);
-            this.router.navigate(['/customize']);
+            this.router.navigate(['/customize/' + item.id]);
         }else{
             tag.target.innerText = "ADD";
             this.selected_products = this.selected_products.filter(_item => {
@@ -80,6 +83,7 @@ export class ListComponent implements OnInit {
             this.local.set("selected_products", this.selected_products);
         }
     }
+
     confirm(){
         if(this.selected_products.length > 0){
             this.router.navigate(['/confirm']);
@@ -88,20 +92,23 @@ export class ListComponent implements OnInit {
     back(){
         this.location.back();
     }
+
     previous(){
-        this.sub_category_id -= 1;
-        if(this.sub_category_id == -1){
-            this.sub_category_id = this.global.sub_category.length - 1;
+        if(this.sub_category_id == 1){
+            this.sub_category_id = this.global.sub_category.length + 1;
         }
+        this.sub_category_id -= 1;
         this.filterBySubCategory();
     }
     next(){
-        this.sub_category_id += 1;
         if(this.sub_category_id == this.global.sub_category.length){
             this.sub_category_id = 0;
         }
+        this.sub_category_id += 1;
         this.filterBySubCategory();
     }
+
+
     setSubCategory(id: number){
         this.sub_category_id = id;
         this.filterBySubCategory();

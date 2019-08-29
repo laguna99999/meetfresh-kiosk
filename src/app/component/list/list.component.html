@@ -4,8 +4,8 @@
         <p class="sub_category" >
             <span
                 *ngFor="let item of global.sub_category; let i = index;"
-                [ngStyle]="{'color': i == sub_category_id ? 'red' : 'black'}"
-                (click)="setSubCategory(item.id - 1)">
+                [ngStyle]="{'color': i == sub_category_id - 1 ? 'red' : 'black'}"
+                (click)="setSubCategory(item.id)">
                 {{item.name}}
                 <span
                     style="color: black"

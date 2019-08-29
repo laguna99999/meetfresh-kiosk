@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
 import { GlobalService } from '../../service/global.service';
+import { LocalstorageService } from '../../service/localstorage.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -18,6 +19,7 @@ export class CustomizeComponent implements OnInit {
 		private route: ActivatedRoute,
         private api: ApiService,
         public global: GlobalService,
+        public local: LocalstorageService,
         private location: Location
     ) { }
 
@@ -32,7 +34,7 @@ export class CustomizeComponent implements OnInit {
             }];
         }
         this.product = this.global.current_products[0];
-
+        
     }
 
     back(){

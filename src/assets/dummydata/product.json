@@ -1,227 +1,219 @@
 {
     "product":[
         {
-            "id":0,
-            "name":"Taro Ball",
-            "img":"/assets/img/p10.png",
-            "category_id": 0,
-            "sub_category_id":0,
-            "price":3.9
-        },
-        {
             "id":1,
             "name":"Taro Ball",
             "img":"/assets/img/p11.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":6.5
         },
         {
             "id":2,
             "name":"Taro Ball",
             "img":"/assets/img/p4.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":2.4
         },
         {
             "id":3,
             "name":"Taro Ball",
             "img":"/assets/img/p11.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":1.1
         },
         {
             "id":4,
             "name":"Taro Ball",
             "img":"/assets/img/p2.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":0.3
         },
         {
             "id":5,
             "name":"Taro Ball",
             "img":"/assets/img/p6.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":3.6
         },
         {
             "id":6,
             "name":"Taro Ball",
             "img":"/assets/img/p8.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":6.5
         },
         {
             "id":7,
             "name":"Taro Ball",
             "img":"/assets/img/p5.png",
-            "category_id": 0,
-            "sub_category_id":0,
+            "category_id": 1,
+            "sub_category_id":1,
             "price":7.1
         },
         {
             "id":8,
             "name":"Grass Jelly",
             "img":"/assets/img/p7.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":9.6
         },
         {
             "id":9,
             "name":"Grass Jelly",
             "img":"/assets/img/p3.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":1
         },
         {
             "id":10,
             "name":"Grass Jelly",
             "img":"/assets/img/p4.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":8.5
         },
         {
             "id":11,
             "name":"Grass Jelly",
             "img":"/assets/img/p2.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":4.2
         },
         {
             "id":12,
             "name":"Grass Jelly",
             "img":"/assets/img/p7.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":7.6
         },
         {
             "id":13,
             "name":"Grass Jelly",
             "img":"/assets/img/p3.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":6.3
         },
         {
             "id":14,
             "name":"Grass Jelly",
             "img":"/assets/img/p11.png",
-            "category_id": 0,
-            "sub_category_id":1,
+            "category_id": 1,
+            "sub_category_id":2,
             "price":2.4
         },
         {
             "id":15,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p10.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":3.4
         },
         {
             "id":16,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p4.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":5.9
         },
         {
             "id":17,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p2.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":8.9
         },
         {
             "id":18,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p2.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":3.7
         },
         {
             "id":19,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p4.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":3.8
         },
         {
             "id":20,
             "name":"Purple Rice Soup",
             "img":"/assets/img/p8.png",
-            "category_id": 0,
-            "sub_category_id":2,
+            "category_id": 1,
+            "sub_category_id":3,
             "price":7.3
         },
         {
             "id":21,
             "name":"Tofu Pudding",
             "img":"/assets/img/p6.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":8.8
         },
         {
             "id":22,
             "name":"Tofu Pudding",
             "img":"/assets/img/p12.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":4.4
         },
         {
             "id":23,
             "name":"Tofu Pudding",
             "img":"/assets/img/p1.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":2.5
         },
         {
             "id":24,
             "name":"Tofu Pudding",
             "img":"/assets/img/p7.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":3.3
         },
         {
             "id":25,
             "name":"Tofu Pudding",
             "img":"/assets/img/p8.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":4.3
         },
         {
             "id":26,
             "name":"Tofu Pudding",
             "img":"/assets/img/p2.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":0.5
         },
         {
             "id":27,
             "name":"Tofu Pudding",
             "img":"/assets/img/p10.png",
-            "category_id": 0,
-            "sub_category_id":3,
+            "category_id": 1,
+            "sub_category_id":4,
             "price":7.7
         }
     ]
