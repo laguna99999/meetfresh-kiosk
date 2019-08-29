@@ -12,7 +12,13 @@ import { Location } from '@angular/common';
 })
 export class CustomizeComponent implements OnInit {
 
+    subscriber: any;
+
     product: any;
+    param: number;
+
+    toppings: any = [];
+    toppings_secondary: any = [];
 
     constructor(
         private router: Router,
@@ -24,26 +30,76 @@ export class CustomizeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        if(this.global.current_products.length == 0){
-            this.global.current_products = [{
-                category_id: 55,
-                id: 375,
-                img: "/assets/img/p5.png",
-                name: "Taro Ball",
-                price: 6.9
-            }];
+        this.subscriber = this.route.params.subscribe(params => {
+            this.param = +params['param']; // (+) converts string 'param' to a number
+        });
+
+        for(let item of this.local.get('selected_products')){
+            if(item.id == this.param){
+                this.product = item;
+            }
         }
-        this.product = this.global.current_products[0];
-        
+    }
+
+    increase(item: any, type: any, tag: any){
+        let value = tag.target.parentElement.querySelector('.count');
+        value.innerText ++;
+
+    }
+
+    decrease(item: any, type: any, tag: any){
+        let value = tag.target.parentElement.querySelector('.count');
+        if(value.innerText != 0){
+            value.innerText --;
+        }
     }
 
     back(){
+        this.update_seleced_products();
         this.location.back();
     }
     confirm(){
+        this.update_seleced_products();
         this.router.navigate(['/confirm']);
     }
     select(item: any){
         this.product = item;
+    }
+
+    private update_seleced_products(){
+        this.toppings = [];
+        this.toppings_secondary = [];
+        let tp = document.getElementsByClassName('tp');
+        let tps = document.getElementsByClassName('tps');
+        for(let item of tp){
+            if(item.innerText != 0){
+                this.toppings.push({
+                    name: item.parentElement.querySelector('.item').innerText,
+                    count: item.innerText
+                });
+            }
+        }
+        for(let item of tps){
+            if(item.innerText != 0){
+                this.toppings_secondary.push({
+                    name: item.parentElement.querySelector('.item').innerText,
+                    count: item.innerText
+                });
+            }
+        }
+        this.product.topping = this.toppings;
+        this.product.topping_secondary = this.toppings_secondary;
+
+        let updated_products = [];
+
+        for(let item of this.local.get('selected_products')){
+            if(item.id != this.product.id){
+                updated_products.push(item);
+            }else{
+                updated_products.push(this.product);
+            }
+        }
+
+        this.local.set("selected_products", updated_products);
     }
 }

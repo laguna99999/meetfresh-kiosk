@@ -33,17 +33,17 @@
                 <div class="topping_lists">
                     <div class="topping_list" *ngFor="let item of global.toppings">
                         <span class="item">{{item}}</span>
-                        <mat-icon>remove_circle</mat-icon>
-                        <span class="count">0</span>
-                        <mat-icon>add_circle</mat-icon>
+                        <mat-icon (click)="decrease(item, 1, $event)">remove_circle</mat-icon>
+                        <span class="count tp">0</span>
+                        <mat-icon (click)="increase(item, 1, $event)">add_circle</mat-icon>
                     </div>
                 </div>
                 <div class="topping_lists">
                     <div class="topping_list" *ngFor="let item of global.toppings_secondary">
                         <span class="item">{{item}}</span>
-                        <mat-icon>remove_circle</mat-icon>
-                        <span class="count">0</span>
-                        <mat-icon>add_circle</mat-icon>
+                        <mat-icon (click)="decrease(item, 0.5, $event)">remove_circle</mat-icon>
+                        <span class="count tps">0</span>
+                        <mat-icon (click)="increase(item, 0.5, $event)">add_circle</mat-icon>
                     </div>
                 </div>
             </div>
