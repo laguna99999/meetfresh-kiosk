@@ -22,7 +22,7 @@ export class CategoryComponent implements OnInit {
             error => this.handleError(error)
         );
     }
-    private setCurrentCategory(item: any){
+    public setCurrentCategory(item: any){
         this.local.set("category", item);
     }
 
