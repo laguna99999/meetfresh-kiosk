@@ -8,34 +8,33 @@
             <thead>
                 <tr>
                     <td></td>
-                    <td>Item</td>
-                    <td>Topping</td>
+                    <td style="text-align: left">Item</td>
+                    <td style="text-align: left">Topping</td>
                     <td>Quantity</td>
                     <td>Price</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="action"><mat-icon>cancel</mat-icon></td>
+                <tr *ngFor="let item of products">
+                    <td class="action"><mat-icon (click)="remove(item)">cancel</mat-icon></td>
                     <td class="item">
-                        <p>Taro Ball</p>
-                        <p>$2</p>
+                        <p>{{item.name}}</p>
+                        <p>${{item.price}}</p>
                     </td>
                     <td class="topping">
-                        <p>Red Bean * 1</p>
-                        <p>Red Bean * 1</p>
-                        <p>Red Bean * 1</p>
+                        <p *ngFor="let tp of item.topping">{{tp.name}} * {{tp.count}}</p>
+                        <p *ngFor="let tps of item.topping_secondary">{{tps.name}} * {{tps.count}}</p>
                     </td>
                     <td class="quantity">
-                        <mat-icon>remove_circle</mat-icon>
-                        <span>1</span>
-                        <mat-icon>add_circle</mat-icon>
+                        <mat-icon (click)="decrease(item)">remove_circle</mat-icon>
+                        <span>{{item.qty}}</span>
+                        <mat-icon (click)="increase(item)">add_circle</mat-icon>
                     </td>
-                    <td class="price">9.80</td>
+                    <td class="price">{{item.total_price.toFixed(2)}}</td>
                 </tr>
             </tbody>
         </table>
-        <span class="total">Total <span>384.16</span></span>
+        <span class="total">Total <span>{{price.toFixed(2)}}</span></span>
     </div>
     <div class="footer">
         <button type="button" name="button" (click)="back()">Back</button>

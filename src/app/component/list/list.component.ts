@@ -63,7 +63,7 @@ export class ListComponent implements OnInit {
     add(tag: any, item: any){
         tag.target.classList.toggle('selected');
         tag.target.innerText = "X";
-
+        item.qty = 1;
         this.selected_products.push(item);
         this.local.set("selected_products", this.selected_products);
         this.router.navigate(['/customize/' + item.id]);
@@ -72,6 +72,7 @@ export class ListComponent implements OnInit {
         tag.target.classList.toggle('selected');
         if(tag.target.classList.contains('selected')){
             tag.target.innerText = "X";
+            item.qty = 1;
             this.selected_products.push(item);
             this.local.set("selected_products", this.selected_products);
             this.router.navigate(['/customize/' + item.id]);

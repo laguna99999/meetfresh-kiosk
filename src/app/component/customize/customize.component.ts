@@ -56,7 +56,7 @@ export class CustomizeComponent implements OnInit {
 
     back(){
         this.update_seleced_products();
-        this.location.back();
+        this.router.navigate(['/list/' + this.local.get('category').id]);
     }
     confirm(){
         this.update_seleced_products();
@@ -71,7 +71,8 @@ export class CustomizeComponent implements OnInit {
         this.toppings_secondary = [];
         let tp = document.getElementsByClassName('tp');
         let tps = document.getElementsByClassName('tps');
-        for(let item of tp){
+
+        for(let item of tp[Symbol.iterator]()){
             if(item.innerText != 0){
                 this.toppings.push({
                     name: item.parentElement.querySelector('.item').innerText,
@@ -79,7 +80,7 @@ export class CustomizeComponent implements OnInit {
                 });
             }
         }
-        for(let item of tps){
+        for(let item of tps[Symbol.iterator]()){
             if(item.innerText != 0){
                 this.toppings_secondary.push({
                     name: item.parentElement.querySelector('.item').innerText,
