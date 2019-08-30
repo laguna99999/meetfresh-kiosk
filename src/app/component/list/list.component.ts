@@ -91,7 +91,7 @@ export class ListComponent implements OnInit {
         }
     }
     back(){
-        this.location.back();
+        this.router.navigate(['/category']);
     }
 
     previous(){

@@ -1,0 +1,81 @@
+.checkout{
+    position: relative;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout .panel{
+    position: relative;
+    border-color: #ddd;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.checkout .panel .panel-heading{
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.checkout .panel .panel-heading h3{
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 20px;
+}
+.checkout .panel .panel-heading img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.checkout .panel .panel-body{
+    padding: 15px;
+}
+.checkout .panel .panel-body .row{
+    width: 100%;
+}
+.checkout .panel label{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 3px;
+}
+.checkout .panel .half{
+    width: 45%;
+    display: inline-block;
+}
+.checkout .panel .input-group{
+    width: 100%;
+    margin: 0 auto;
+}
+.checkout .panel .input-group input{
+    width: 100%;
+    line-height: 25px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.checkout .panel .panel-footer{
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.checkout .panel .panel-footer button{
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}

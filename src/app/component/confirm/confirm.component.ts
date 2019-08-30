@@ -47,7 +47,7 @@ export class ConfirmComponent implements OnInit {
     decrease(item: any){
         for(let p of this.products){
             if(p.id == item.id){
-                if(item.qty != 0) item.qty --;
+                if(item.qty != 1) item.qty --;
             }
         }
         this.update_price();
@@ -72,5 +72,6 @@ export class ConfirmComponent implements OnInit {
             item.total_price = price;
             this.price += price;
         }
+        this.local.set('selected_products', this.products);
     }
 }

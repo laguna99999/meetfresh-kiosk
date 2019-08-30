@@ -32,18 +32,18 @@
             <div class="topping_content">
                 <div class="topping_lists">
                     <div class="topping_list" *ngFor="let item of global.toppings">
-                        <span class="item">{{item}}</span>
-                        <mat-icon (click)="decrease(item, 1, $event)">remove_circle</mat-icon>
+                        <span class="item" (click)="show(item.img)">{{item.name}}</span>
+                        <mat-icon (click)="decrease(item.name, 1, $event)">remove_circle</mat-icon>
                         <span class="count tp">0</span>
-                        <mat-icon (click)="increase(item, 1, $event)">add_circle</mat-icon>
+                        <mat-icon (click)="increase(item.name, 1, $event)">add_circle</mat-icon>
                     </div>
                 </div>
                 <div class="topping_lists">
                     <div class="topping_list" *ngFor="let item of global.toppings_secondary">
-                        <span class="item">{{item}}</span>
-                        <mat-icon (click)="decrease(item, 0.5, $event)">remove_circle</mat-icon>
+                        <span class="item" (click)="show(item.img)">{{item.name}}</span>
+                        <mat-icon (click)="decrease(item.name, 0.5, $event)">remove_circle</mat-icon>
                         <span class="count tps">0</span>
-                        <mat-icon (click)="increase(item, 0.5, $event)">add_circle</mat-icon>
+                        <mat-icon (click)="increase(item.name, 0.5, $event)">add_circle</mat-icon>
                     </div>
                 </div>
             </div>
@@ -54,32 +54,32 @@
                 <p>Ice Level</p>
             </div>
             <div class="level_content">
-                <div class="level_lists">
+                <div class="level_lists sugar_level">
                     <div class="level_list">
                         <span>Regular</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="regular">stop</mat-icon>
                     </div>
                     <div class="level_list">
                         <span>Half Sugar</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="half">crop_square</mat-icon>
                     </div>
                     <div class="level_list">
                         <span>Sugar Free</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="free">crop_square</mat-icon>
                     </div>
                 </div>
-                <div class="level_lists">
+                <div class="level_lists ice_level">
                     <div class="level_list">
                         <span>Regular</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="regular">stop</mat-icon>
                     </div>
                     <div class="level_list">
                         <span>Less Ice</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="less">crop_square</mat-icon>
                     </div>
                     <div class="level_list">
                         <span>No Ice</span>
-                        <mat-icon>stop</mat-icon>
+                        <mat-icon (click)="level($event)" value="no">crop_square</mat-icon>
                     </div>
                 </div>
             </div>
@@ -91,5 +91,9 @@
     </div>
     <div class="sbm">
         Powered By SBM Technology Corp
+    </div>
+    <div class="topping-image">
+        <img src="" alt="MeetFresh Topping image">
+        <mat-icon (click)="hide()">close</mat-icon>
     </div>
 </div>

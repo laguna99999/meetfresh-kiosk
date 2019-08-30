@@ -20,6 +20,9 @@ export class CustomizeComponent implements OnInit {
     toppings: any = [];
     toppings_secondary: any = [];
 
+    sugar_level: any = '';
+    ice_level: any = '';
+
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
@@ -65,10 +68,25 @@ export class CustomizeComponent implements OnInit {
     select(item: any){
         this.product = item;
     }
-
+    level(tag: any){
+        for(let item of tag.target.parentElement.parentElement.getElementsByTagName('mat-icon')[Symbol.iterator]()){
+            item.innerText = 'crop_square';
+        }
+        tag.target.innerText = 'stop';
+    }
+    show(img: any){
+        let tag = document.getElementsByClassName('topping-image')[0];
+        tag.setAttribute('style', 'display: block');
+        tag.getElementsByTagName('img')[0].setAttribute('src', '/assets/img/' + img);
+    }
+    hide(){
+        document.getElementsByClassName('topping-image')[0].setAttribute('style', 'display: none')
+    }
     private update_seleced_products(){
         this.toppings = [];
         this.toppings_secondary = [];
+        this.sugar_level = 1;
+        this.ice_level = 1;
         let tp = document.getElementsByClassName('tp');
         let tps = document.getElementsByClassName('tps');
 
@@ -90,6 +108,21 @@ export class CustomizeComponent implements OnInit {
         }
         this.product.topping = this.toppings;
         this.product.topping_secondary = this.toppings_secondary;
+
+        let sugar = document.getElementsByClassName('sugar_level')[0].getElementsByTagName('mat-icon');
+        let ice = document.getElementsByClassName('ice_level')[0].getElementsByTagName('mat-icon');
+
+        for(let item of sugar[Symbol.iterator]()){
+            if(item.innerText == 'stop'){
+                this.product.sugar_level = item.getAttribute('value');
+            }
+        }
+
+        for(let item of ice[Symbol.iterator]()){
+            if(item.innerText == 'stop'){
+                this.product.ice_level = item.getAttribute('value');
+            }
+        }
 
         let updated_products = [];
 

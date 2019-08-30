@@ -12,6 +12,7 @@ import { EndComponent } from './component/end/end.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './module/material/material.module';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { MaterialModule } from './module/material/material.module';
     CategoryComponent,
     ConfirmComponent,
     CustomizeComponent,
-    EndComponent
+    EndComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
