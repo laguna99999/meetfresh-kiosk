@@ -65,3 +65,11 @@
     max-width: 450px;
     line-height: 25px;
 }
+@media(min-width: 992px){
+    .home .header h1{
+        font-size: 123px;
+        line-height: 153px;
+        color: #453a2b;
+        font-family: "raustila";
+    }
+}

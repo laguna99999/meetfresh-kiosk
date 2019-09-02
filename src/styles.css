@@ -3,7 +3,13 @@
 @font-face {
     font-family: 'texgyreadventor';
     src: url('assets/font/texgyreadventor-regular.otf');
-    font-weight: bold;
+    font-weight: normal;
 }
+@font-face {
+    font-family: 'raustila';
+    src: url('assets/font/raustila-Regular.otf');
+    font-weight: normal;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: 'texgyreadventor', sans-serif; }
