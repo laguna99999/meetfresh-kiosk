@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
         this.local.set("menu", item);
     }
     public cart(){
-        
+        this.router.navigate(['/confirm']);
     }
     private handleResponse(data){
         this.menu = data.menu;

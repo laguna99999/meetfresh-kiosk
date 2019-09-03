@@ -44,42 +44,46 @@ export class CustomizeComponent implements OnInit {
         }
     }
 
-    increase(item: any, type: any, tag: any){
+    public increase(item: any, type: any, tag: any){
         let value = tag.target.parentElement.querySelector('.count');
         value.innerText ++;
 
     }
 
-    decrease(item: any, type: any, tag: any){
+    public decrease(item: any, type: any, tag: any){
         let value = tag.target.parentElement.querySelector('.count');
         if(value.innerText != 0){
             value.innerText --;
         }
     }
 
-    back(){
+    public go_menu(){
         this.update_seleced_products();
-        this.router.navigate(['/list/' + this.local.get('category').id]);
+        this.router.navigate(['/menu']);
     }
-    confirm(){
+    public home(){
+        this.router.navigate(['/']);
+    }
+    public cart(){
         this.update_seleced_products();
         this.router.navigate(['/confirm']);
     }
-    select(item: any){
-        this.product = item;
+    public add_cart(){
+        this.update_seleced_products();
+        this.router.navigate(['/confirm']);
     }
-    level(tag: any){
+    public level(tag: any){
         for(let item of tag.target.parentElement.parentElement.getElementsByTagName('mat-icon')[Symbol.iterator]()){
             item.innerText = 'crop_square';
         }
         tag.target.innerText = 'stop';
     }
-    show(img: any){
+    public show(img: any){
         let tag = document.getElementsByClassName('topping-image')[0];
         tag.setAttribute('style', 'display: block');
         tag.getElementsByTagName('img')[0].setAttribute('src', '/assets/img/' + img);
     }
-    hide(){
+    public hide(){
         document.getElementsByClassName('topping-image')[0].setAttribute('style', 'display: none')
     }
     private update_seleced_products(){

@@ -83,7 +83,7 @@ export class ListComponent implements OnInit {
         this.router.navigate(['/menu']);
     }
     public cart(){
-
+        this.router.navigate(['/confirm']);
     }
     private handleResponse(data){
         this.all_products = data.product.filter(item => {
