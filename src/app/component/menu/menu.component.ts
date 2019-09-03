@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { LocalstorageService } from '../../service/localstorage.service';
-
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-menu',
     templateUrl: './menu.component.html',
@@ -13,7 +13,8 @@ export class MenuComponent implements OnInit {
 
     constructor(
         private api: ApiService,
-        public local: LocalstorageService
+        public local: LocalstorageService,
+        private router: Router,
     ) { }
 
     ngOnInit() {
