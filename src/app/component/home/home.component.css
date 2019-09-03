@@ -4,72 +4,79 @@
 }
 .home .background{
     width: 100%;
-    max-width: 480px;
-    height: 100vh;
-    max-height: 900px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 }
-.home .taro{
-    float: right;
-}
 .home .logo{
+    position: absolute;
+    top: 6.5%;
     width: 100%;
     text-align: center;
 }
 .home .logo img{
-    margin: 48px auto;
-    width: 225px;
+    margin: 0px auto;
+    width: 57.4%;
 }
 .home .header{
+    position: absolute;
+    width: 100%;
     color: #453a2b;
+    top: 18.75%;
 }
 .home .header h1{
-    margin: 0 40px;
-    font-family: 'cookie', cursive;
-    font-size: 50px;
+    margin: 0 10.2%;
+    font-family: 'raustila';
 }
 .home .header h3{
-    margin: 0 40px;
+    margin: 0 10.2%;
 }
 .home .footer{
-    position: fixed;
+    position: absolute;
     background-color: black;
     bottom: 0;
-    min-height: 94px;
-    max-width: 480px;
     width: 100%;
+    height: 12.5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .home .footer button{
-    padding: 0 20px;
+    padding: 3%;
+    margin: 2%;
     background-color: black;
     line-height: 40px;
     color: white;
-    font-size: 17px;
     outline: none;
     font-family: 'texgyreadventor';
-    border: 1px solid white;
+
 }
-.home .sbm{
-    position: fixed;
-    bottom: 0;
-    color: white;
-    font-size: 10px;
-    text-align: center;
-    width: 100%;
-    max-width: 450px;
-    line-height: 25px;
-}
-@media(min-width: 992px){
+@media (min-width: 768px){
     .home .header h1{
         font-size: 123px;
-        line-height: 153px;
-        color: #453a2b;
-        font-family: "raustila";
+        line-height: 120px;
+    }
+    .home .header h3{
+        font-size: 51px;
+    }
+    .home .footer button{
+        font-size: 53px;
+        line-height: 50px;
+        border: 2px solid white;
+    }
+}
+@media (max-width: 767px){
+    .home .header h1{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .home .header h3{
+        font-size: 20px;
+    }
+    .home .footer button{
+        font-size: 18px;
+        line-height: 16px;
+        border: 1px solid white;
     }
 }

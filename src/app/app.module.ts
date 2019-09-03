@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './module/material/material.module';
 import { CheckoutComponent } from './component/checkout/checkout.component';
+import { SbmComponent } from './component/sbm/sbm.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
     ConfirmComponent,
     CustomizeComponent,
     EndComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SbmComponent
   ],
   imports: [
     BrowserModule,

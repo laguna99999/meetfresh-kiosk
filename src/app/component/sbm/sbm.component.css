@@ -1,0 +1,17 @@
+.sbm{
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+@media (min-width: 768px){
+    .sbm{
+        font-size: 20px;
+    }
+}
+@media (max-width: 767px){
+    .sbm{
+        font-size: 8px;
+    }
+}
