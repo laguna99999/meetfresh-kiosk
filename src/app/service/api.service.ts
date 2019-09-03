@@ -12,8 +12,8 @@ export class ApiService {
         private http: HttpClient
     ) { }
 
-    public get_categories(){
-        return this.http.get(`${this.baseURL}category.json`);
+    public get_menuitems(){
+        return this.http.get(`${this.baseURL}menu.json`);
     }
     public get_products(){
         return this.http.get(`${this.baseURL}product.json`);

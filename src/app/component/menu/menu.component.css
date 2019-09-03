@@ -1,0 +1,106 @@
+.menu{
+    position: relative;
+    height: 100%;
+}
+.menu .background{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.menu h1{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "raustila";
+}
+.menu .cart{
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    text-align: center;
+}
+.menu .cart mat-icon{
+    color: white;
+}
+.menu .box{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menu .box .wrap{
+    width: 43%;
+}
+.menu .box .wrap .menu-item{
+    margin: 4.5% 2%;
+}
+.menu .box .wrap .menu-item img{
+    width: 100%;
+}
+.menu .box .wrap .menu-item p{
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+@media (min-width: 768px){
+    .menu h1{
+        font-size: 100px;
+        top: 40px;
+    }
+    .menu .cart{
+        right: 40px;
+        width: 120px;
+        height: 120px;
+        top: 30px;
+
+    }
+    .menu .cart mat-icon{
+        font-size: 90px;
+        width: 90px;
+        height: 90px;
+        line-height: 120px;
+    }
+    .menu .box{
+        top: 170px;
+    }
+    .menu .box .wrap .menu-item{
+
+    }
+    .menu .box .wrap .menu-item p{
+        line-height: 60px;
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 767px){
+    .menu h1{
+        font-size: 50px;
+        top: 20px;
+    }
+    .menu .cart{
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        top: 10px;
+    }
+    .menu .cart mat-icon{
+        font-size: 35px;
+        width: 35px;
+        height: 35px;
+        line-height: 55px;
+    }
+    .menu .box{
+        top: 65px;
+    }
+    .menu .box .wrap .menu-item{
+
+    }
+    .menu .box .wrap .menu-item p{
+        line-height: 18px;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+}

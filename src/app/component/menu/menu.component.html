@@ -1,0 +1,25 @@
+<div class="menu">
+    <img class="background" src="assets/img/v2/background.jpg" alt="MeetFresh background">
+    <h1>Menu</h1>
+    <div class="cart" (click)="cart()">
+        <mat-icon>shopping_cart</mat-icon>
+    </div>
+    <div class="box">
+        <div class="wrap">
+            <div class="menu-item" *ngFor="let item of menu; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="/list/{{item.id}}" (click)="setCurrentMenu(item)">
+                <img *ngIf="i % 2 == 0" src="{{item.img}}" alt="Menu name">
+                <p *ngIf="i % 2 == 0" class="menu-name">
+                    {{item.name}}
+                </p>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="menu-item" *ngFor="let item of menu; let i = index" [ngStyle]="{'background-color': item.color}" routerLink="/list/{{item.id}}" (click)="setCurrentMenu(item)">
+                <img *ngIf="i % 2 == 1" src="{{item.img}}" alt="Menu name">
+                <p *ngIf="i % 2 == 1" class="menu-name">
+                    {{item.name}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

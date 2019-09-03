@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './module/material/material.module';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import { SbmComponent } from './component/sbm/sbm.component';
+import { MenuComponent } from './component/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { SbmComponent } from './component/sbm/sbm.component';
     CustomizeComponent,
     EndComponent,
     CheckoutComponent,
-    SbmComponent
+    SbmComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

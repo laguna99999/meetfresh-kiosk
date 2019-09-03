@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './component/home/home.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
-import { CategoryComponent } from './component/category/category.component';
+import { MenuComponent } from './component/menu/menu.component';
 import { ListComponent } from './component/list/list.component';
 import { CustomizeComponent } from './component/customize/customize.component';
 import { ConfirmComponent } from './component/confirm/confirm.component';
@@ -13,7 +13,7 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'pager', component: PaginationComponent },
-    { path: 'category', component: CategoryComponent },
+    { path: 'menu', component: MenuComponent },
     { path: 'list/:param', component: ListComponent },
     { path: 'customize/:param', component: CustomizeComponent },
     { path: 'confirm', component: ConfirmComponent },

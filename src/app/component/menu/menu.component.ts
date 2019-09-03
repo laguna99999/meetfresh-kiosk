@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { LocalstorageService } from '../../service/localstorage.service';
-@Component({
-    selector: 'app-category',
-    templateUrl: './category.component.html',
-    styleUrls: ['./category.component.css']
-})
-export class CategoryComponent implements OnInit {
 
-    category: any;
-    error: string;
+@Component({
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrls: ['./menu.component.css']
+})
+export class MenuComponent implements OnInit {
+
+    menu: any;
 
     constructor(
         private api: ApiService,
@@ -17,19 +17,21 @@ export class CategoryComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        return this.api.get_categories().subscribe(
+        return this.api.get_menuitems().subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
         );
     }
-    public setCurrentCategory(item: any){
-        this.local.set("category", item);
+    public setCurrentMenu(item: any){
+        this.local.set("menu", item);
     }
-
+    public cart(){
+        
+    }
     private handleResponse(data){
-        this.category = data.category;
+        this.menu = data.menu;
     }
     private handleError(error){
-        this.error = error.message;
+        console.log(error);
     }
 }

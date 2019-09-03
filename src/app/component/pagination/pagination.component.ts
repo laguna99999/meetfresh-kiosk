@@ -27,7 +27,7 @@ export class PaginationComponent implements OnInit {
     }
 
     enter(){
-        this.router.navigate(['category']);
+        this.router.navigate(['menu']);
     }
 
     help(){
