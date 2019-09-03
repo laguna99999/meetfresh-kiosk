@@ -3,7 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../service/api.service';
 import { GlobalService } from '../../service/global.service';
 import { LocalstorageService } from '../../service/localstorage.service';
-import { Location } from '@angular/common';
 @Component({
     selector: 'app-list',
     templateUrl: './list.component.html',
@@ -16,20 +15,18 @@ export class ListComponent implements OnInit {
 
     menu: any;
     category_id: number = 1;
-    product_ids: any;
+
     all_products: any;
     products: any;
 
     selected_products: any;
-    error: string;
 
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
         private api: ApiService,
         public global: GlobalService,
-        public local: LocalstorageService,
-        private location: Location
+        public local: LocalstorageService
     ) { }
 
     ngOnInit() {
@@ -44,12 +41,6 @@ export class ListComponent implements OnInit {
 
         if(this.local.get('selected_products')){
             this.selected_products = [...this.local.get('selected_products')];
-        }
-
-        if(this.selected_products){
-            this.product_ids = this.selected_products.map(item => {
-                return item.id
-            })
         }
     }
 
