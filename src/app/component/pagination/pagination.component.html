@@ -1,42 +1,35 @@
 <div class="pager">
-    <img class="background" src="assets/img/background.png" alt="MeetFresh background">
-    <div class="header">
-        <img src="assets/img/3.png" alt="">
-    </div>
+    <img class="background" src="assets/img/v2/pager.jpg" alt="MeetFresh background">
     <div class="sub-header">
-        <img src="assets/img/2.png" alt="Sub header decoration">
+        <img src="assets/img/v2/decorator.png" alt="Sub header decoration">
     </div>
-    <h1>Pick up Your Pager<br/> & Enter the number</h1>
-    <div class="page_number">
-        {{ page_number }}
-    </div>
-    <div class="numbers">
-        <div class="line">
-            <div matRipple (click)="number(1)">1</div>
-            <div matRipple (click)="number(2)">2</div>
-            <div matRipple (click)="number(3)">3</div>
+    <div class="box">
+        <h1>Pick up Your Pager<br/> & Enter the number</h1>
+        <div class="page_number">
+            {{ page_number }}
         </div>
-        <div class="line">
-            <div matRipple (click)="number(4)">4</div>
-            <div matRipple (click)="number(5)">5</div>
-            <div matRipple (click)="number(6)">6</div>
+        <div class="numbers">
+            <div class="line">
+                <div matRipple (click)="number(1)">1</div>
+                <div matRipple (click)="number(2)">2</div>
+                <div matRipple (click)="number(3)">3</div>
+            </div>
+            <div class="line">
+                <div matRipple (click)="number(4)">4</div>
+                <div matRipple (click)="number(5)">5</div>
+                <div matRipple (click)="number(6)">6</div>
+            </div>
+            <div class="line">
+                <div matRipple (click)="number(7)">7</div>
+                <div matRipple (click)="number(8)">8</div>
+                <div matRipple (click)="number(9)">9</div>
+            </div>
+            <div class="line">
+                <div matRipple disabled> </div>
+                <div matRipple (click)="number(0)">0</div>
+                <div matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></div>
+            </div>
         </div>
-        <div class="line">
-            <div matRipple (click)="number(7)">7</div>
-            <div matRipple (click)="number(8)">8</div>
-            <div matRipple (click)="number(9)">9</div>
-        </div>
-        <div class="line">
-            <div matRipple disabled> </div>
-            <div matRipple (click)="number(0)">0</div>
-            <div matRipple  (click)="erase()"><mat-icon aria-hidden="false" aria-label="Remove numbers">backspace</mat-icon></div>
-        </div>
-    </div>
-    <button class="confirm" matRipple (click)="enter()">Enter</button>
-    <div class="help" (click)="help()">
-        <mat-icon matRipple aria-hidden="false" aria-label="MeatFresh help">help</mat-icon>
-    </div>
-    <div class="sbm">
-        Powered By SBM Technology Corp
+        <button class="confirm" matRipple (click)="enter()">Enter</button>
     </div>
 </div>
