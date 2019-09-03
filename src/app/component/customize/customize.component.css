@@ -187,6 +187,8 @@
     .customize .box .order .description .name{
         font-size: 50px;
         line-height: 100px;
+        max-height: 100px;
+        overflow: auto;
     }
     .customize .box .order .description .separator{
         top: 30%;
@@ -289,6 +291,8 @@
     .customize .box .order .description .name{
         font-size: 20px;
         line-height: 50px;
+        max-height: 50px;
+        overflow: auto;
     }
     .customize .box .order .description .separator{
         top: 35%;
