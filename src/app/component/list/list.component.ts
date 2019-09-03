@@ -14,8 +14,8 @@ export class ListComponent implements OnInit {
     param: number = -1;
     subscriber: any;
 
-    category: any;
-    sub_category_id: number = 1;
+    menu: any;
+    category_id: number = 1;
     product_ids: any;
     all_products: any;
     products: any;
@@ -40,7 +40,7 @@ export class ListComponent implements OnInit {
     		});
         }
 
-        this.category = this.local.get('category');
+        this.menu = this.local.get('menu');
 
         if(this.local.get('selected_products')){
             this.selected_products = [...this.local.get('selected_products')];
@@ -60,72 +60,52 @@ export class ListComponent implements OnInit {
         );
     }
 
-    add(tag: any, item: any){
-        tag.target.classList.toggle('selected');
-        tag.target.innerText = "X";
+    add_product(item: any){
         item.qty = 1;
         this.selected_products.push(item);
         this.local.set("selected_products", this.selected_products);
         this.router.navigate(['/customize/' + item.id]);
     }
-    remove(tag: any, item: any){
-        tag.target.classList.toggle('selected');
-        if(tag.target.classList.contains('selected')){
-            tag.target.innerText = "X";
-            item.qty = 1;
-            this.selected_products.push(item);
-            this.local.set("selected_products", this.selected_products);
-            this.router.navigate(['/customize/' + item.id]);
-        }else{
-            tag.target.innerText = "ADD";
-            this.selected_products = this.selected_products.filter(_item => {
-                return _item.id != item.id
-            })
-            this.local.set("selected_products", this.selected_products);
-        }
-    }
 
-    confirm(){
-        if(this.selected_products.length > 0){
-            this.router.navigate(['/confirm']);
+    public previous(){
+        if(this.category_id == 1){
+            this.category_id = this.global.category.length + 1;
         }
+        this.category_id -= 1;
+        this.filterByCategory();
     }
-    back(){
-        this.router.navigate(['/category']);
-    }
-
-    previous(){
-        if(this.sub_category_id == 1){
-            this.sub_category_id = this.global.sub_category.length + 1;
+    public next(){
+        if(this.category_id == this.global.category.length){
+            this.category_id = 0;
         }
-        this.sub_category_id -= 1;
-        this.filterBySubCategory();
+        this.category_id += 1;
+        this.filterByCategory();
     }
-    next(){
-        if(this.sub_category_id == this.global.sub_category.length){
-            this.sub_category_id = 0;
-        }
-        this.sub_category_id += 1;
-        this.filterBySubCategory();
+    public setCategory(id: number){
+        this.category_id = id;
+        this.filterByCategory();
     }
+    public home(){
+        this.router.navigate(['/']);
+    }
+    public go_menu(){
+        this.router.navigate(['/menu']);
+    }
+    public cart(){
 
-
-    setSubCategory(id: number){
-        this.sub_category_id = id;
-        this.filterBySubCategory();
     }
     private handleResponse(data){
         this.all_products = data.product.filter(item => {
-            return (item.category_id == this.param);
+            return (item.menu_id == this.param);
         });
-        this.filterBySubCategory();
+        this.filterByCategory();
     }
     private handleError(error){
-        this.error = error.message;
+        console.log(error);
     }
-    private filterBySubCategory(){
+    private filterByCategory(){
         this.products = this.all_products.filter(item => {
-            return (item.sub_category_id == this.sub_category_id);
+            return (item.category_id == this.category_id);
         });
     }
 }

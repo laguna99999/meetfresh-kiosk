@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
     public current_products: any = [];
 
-    public sub_category: any = [
+    public category: any = [
         {
             id: 1,
             name: "Taro Ball"

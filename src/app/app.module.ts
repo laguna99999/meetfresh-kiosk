@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
 import { ListComponent } from './component/list/list.component';
-import { CategoryComponent } from './component/category/category.component';
 import { ConfirmComponent } from './component/confirm/confirm.component';
 import { CustomizeComponent } from './component/customize/customize.component';
 import { EndComponent } from './component/end/end.component';
@@ -21,7 +20,6 @@ import { MenuComponent } from './component/menu/menu.component';
     HomeComponent,
     PaginationComponent,
     ListComponent,
-    CategoryComponent,
     ConfirmComponent,
     CustomizeComponent,
     EndComponent,
