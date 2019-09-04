@@ -1,1 +1,36 @@
-<p>payment works!</p>
+<div class="payment">
+    <img class="background" src="/assets/img/v2/background.jpg" alt="MeetFresh background">
+    <div class="header">
+        <p class="payment_name">Payment</p>
+    </div>
+    <div class="box">
+        <div class="gift" (click)="gift()">
+            <h1>Gift Card</h1>
+            <div>
+                <img src="/assets/img/v2/payment1.png" alt="Barcode scanner">
+            </div>
+            <h3>Scan to pay in the tore</h3>
+        </div>
+        <div class="credit" (click)="credit()">
+            <h1>Credit Card</h1>
+            <div>
+                <img src="/assets/img/v2/payment2.png" alt="Barcode scanner">
+            </div>
+            <h3>Please insert your card<br> and do not remove it.</h3>
+        </div>
+        <div class="quick" (click)="quick()">
+            <h1>Quick Pay</h1>
+            <div>
+                <img src="/assets/img/v2/payment3.png" alt="Barcode scanner">
+            </div>
+            <h3>Scan QR Code to complete payment</h3>
+        </div>
+    </div>
+    <div class="footer">
+        <button type="button" name="back" (click)="back()">Back</button>
+        <div class="home">
+            <mat-icon (click)="home()">home</mat-icon>
+        </div>
+    </div>
+    <app-sbm></app-sbm>
+</div>
