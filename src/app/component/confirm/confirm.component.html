@@ -1,5 +1,5 @@
 <div class="confirm">
-    <img class="background" src="assets/img/background.png" alt="MeetFresh Confirm">
+    <img class="background" src="assets/img/v2/background.jpg" alt="MeetFresh Confirm">
     <div class="header">
         <p class="confirm_name">Confirm Your Order</p>
     </div>
@@ -7,40 +7,56 @@
         <table>
             <thead>
                 <tr>
-                    <td></td>
-                    <td style="text-align: left">Item</td>
-                    <td style="text-align: left">Topping</td>
-                    <td>Quantity</td>
-                    <td>Price</td>
+                    <td style="width: 4.6%;"></td>
+                    <td style="width: 21%;">Item</td>
+                    <td style="width: 37.2%;">Topping</td>
+                    <td style="width: 23.25%;">Quantity</td>
+                    <td style="width: 14%;">Price</td>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of products">
                     <td class="action"><mat-icon (click)="remove(item)">cancel</mat-icon></td>
                     <td class="item">
-                        <p>{{item.name}}</p>
-                        <p>${{item.price}}</p>
+                        <p>{{item.name}} ${{item.price}}</p>
                     </td>
                     <td class="topping">
-                        <p *ngFor="let tp of item.topping">{{tp.name}} * {{tp.count}}</p>
-                        <p *ngFor="let tps of item.topping_secondary">{{tps.name}} * {{tps.count}}</p>
+                        <div *ngFor="let tp of item.topping">
+                            <p>{{tp.name}}</p>
+                            <span>{{tp.count}}</span>
+                            <mat-icon class="plus" (click)="t_increase(item, tp)">add_circle</mat-icon>
+                            <mat-icon class="minus" (click)="t_decrease(item, tp)">remove_circle</mat-icon>
+                        </div>
+                        <div *ngFor="let tps of item.topping_secondary">
+                            <p>{{tps.name}}</p>
+                            <span>{{tps.count}}</span>
+                            <mat-icon class="plus" (click)="ts_increase(item, tps)">add_circle</mat-icon>
+                            <mat-icon class="minus" (click)="ts_decrease(item, tps)">remove_circle</mat-icon>
+                        </div>
+
                     </td>
                     <td class="quantity">
-                        <mat-icon (click)="decrease(item)">remove_circle</mat-icon>
                         <span>{{item.qty}}</span>
-                        <mat-icon (click)="increase(item)">add_circle</mat-icon>
+                        <mat-icon class="plus" (click)="increase(item)">add_circle</mat-icon>
+                        <mat-icon class="minus" (click)="decrease(item)">remove_circle</mat-icon>
                     </td>
-                    <td class="price">{{item.total_price.toFixed(2)}}</td>
+                    <td class="price">${{item.total_price.toFixed(2)}}</td>
                 </tr>
             </tbody>
         </table>
-        <span class="total">Total <span>{{price.toFixed(2)}}</span></span>
+        <span class="total">Total <span>${{price.toFixed(2)}}</span></span>
     </div>
+    <img class="dine" src="/assets/img/v2/dinein.png" alt="" (click)="dine()">
+    <img class="togo" src="/assets/img/v2/togo.png" alt="" (click)="togo()">
     <div class="footer">
-        <button type="button" name="button" (click)="back()">Back</button>
-        <button type="button" name="button" (click)="confirm()">Confirm</button>
+        <button type="button" name="back" (click)="back()">Menu</button>
+        <button type="button" name="back" (click)="checkout()">Add to cart</button>
+        <div class="home">
+            <mat-icon (click)="home()">home</mat-icon>
+        </div>
+        <div class="cart">
+            <mat-icon (click)="cart()">shopping_cart</mat-icon>
+        </div>
     </div>
-    <div class="sbm">
-        Powered By SBM Technology Corp
-    </div>
+    <app-sbm></app-sbm>
 </div>

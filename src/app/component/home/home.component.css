@@ -79,3 +79,10 @@
         border: 1px solid white;
     }
 }
+@media (max-width: 380px){
+    .home .footer button{
+        font-size: 14px;
+        line-height: 12px;
+        border: 1px solid white;
+    }
+}

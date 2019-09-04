@@ -28,15 +28,11 @@ export class ConfirmComponent implements OnInit {
         this.update_price();
     }
 
-    back(){
-        this.router.navigate(['/list/' + this.local.get('category').id]);
+    public back(){
+        this.router.navigate(['/list/' + this.local.get('menu').id]);
     }
-    confirm(){
-        this.local.set('total', this.price);
-        this.local.set('final', this.products);
-        this.router.navigate(['/end']);
-    }
-    increase(item: any){
+
+    public increase(item: any){
         for(let p of this.products){
             if(p.id == item.id){
                 item.qty ++;
@@ -44,7 +40,7 @@ export class ConfirmComponent implements OnInit {
         }
         this.update_price();
     }
-    decrease(item: any){
+    public decrease(item: any){
         for(let p of this.products){
             if(p.id == item.id){
                 if(item.qty != 1) item.qty --;
@@ -52,12 +48,84 @@ export class ConfirmComponent implements OnInit {
         }
         this.update_price();
     }
-    remove(item: any){
+
+    public t_increase(item: any, tp: any){
+        for(let p of this.products){
+            if(p.id == item.id){
+                for(let t of p.topping){
+                    if(t.name == tp.name){
+                        tp.count ++;
+                    }
+                }
+            }
+        }
+        this.update_price();
+    }
+    public t_decrease(item: any, tp: any){
+        for(let p of this.products){
+            if(p.id == item.id){
+                for(let t of p.topping){
+                    if(t.name == tp.name){
+                        if(tp.count != 1) tp.count --;
+                    }
+                }
+            }
+        }
+        this.update_price();
+    }
+    public ts_increase(item: any, tps: any){
+        for(let p of this.products){
+            if(p.id == item.id){
+                for(let t of p.topping_secondary){
+                    if(t.name == tps.name){
+                        tps.count ++;
+                    }
+                }
+            }
+        }
+        this.update_price();
+    }
+    public ts_decrease(item: any, tps: any){
+        for(let p of this.products){
+            if(p.id == item.id){
+                for(let t of p.topping_secondary){
+                    if(t.name == tps.name){
+                        if(tps.count != 1) tps.count --;
+                    }
+                }
+            }
+        }
+        this.update_price();
+    }
+
+    public remove(item: any){
         this.products = this.products.filter(_item => {
             return _item.id != item.id
         })
         this.update_price();
     }
+    public checkout(){
+        this.local.set('total', this.price);
+        this.local.set('final', this.products);
+        this.router.navigate(['/checkout']);
+    }
+    public home(){
+        this.router.navigate(['/home']);
+    }
+    public dine(){
+        this.local.set('total', this.price);
+        this.local.set('final', this.products);
+        this.router.navigate(['/checkout']);
+    }
+    public togo(){
+        this.local.set('total', this.price);
+        this.local.set('final', this.products);
+        this.router.navigate(['/checkout']);
+    }
+    public cart(){
+        this.router.navigate(['/confirm']);
+    }
+
     private update_price(){
         this.price = 0;
         for(let item of this.products){

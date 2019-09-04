@@ -3,23 +3,42 @@
     height: 100%;
 }
 .confirm .background{
-    width: 100%;
-    max-width: 480px;
-    height: 100vh;
-    max-height: 900px;
     position: absolute;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
 }
+.confirm .header{
+    position: absolute;
+    width: 100%;
+}
+.confirm .header .confirm_name{
+    font-family: 'raustila';
+    margin: 0;
+    text-align: center;
+}
+.confirm .dine{
+    position: absolute;
+    bottom: 16.67%;
+    width: 43.5%;
+    left: 6.5%;
+}
+.confirm .togo{
+    position: absolute;
+    bottom: 14.67%;
+    width: 43.5%;
+    right: 6.5%;
+}
 .confirm .box{
     position: absolute;
     width: 80%;
-    height: 75%;
+    height: 50%;
     top: 0;
     left: 0;
     margin-top: 20%;
     margin-left: 10%;
+    overflow: auto;
 }
 .confirm .box table {
     text-align: center;
@@ -29,100 +48,320 @@
 }
 .confirm .box table thead tr td{
     color: #eb9239;
-    border-bottom: 1px solid #aaa;
-    line-height: 40px;
-    font-size: 15px;
+    border-bottom: 2px solid #aaa;
+}
+.confirm .box table tbody tr td{
+    padding-top: 2%;
 }
 .confirm .box table tbody .action{
     vertical-align: top;
     cursor: pointer;
 }
 .confirm .box table tbody .action mat-icon{
-    font-size: 15px;
-    width: 15px;
-    height: 15px;
     color: #eb9239;
 }
-.confirm .box table tbody .topping, .confirm .box table tbody .item{
-    font-size: 10px;
+.confirm .box .item{
     vertical-align: top;
 }
-.confirm .box table tbody .item p{
+.confirm .box .item p{
+    margin: 0 5%;
     text-align: left;
-    margin: 3px 10px;
+    font-weight: 600;
 }
-.confirm .box table tbody .topping p{
-    text-align: left;
-    margin: 3px auto;
-    max-width: 105px;
-}
-.confirm .box table tbody .quantity{
+.confirm .box .topping{
     vertical-align: top;
+    text-align: right;
 }
-.confirm .box table tbody .quantity span{
-    font-size: 15px;
-    margin: 0 10px;
+.confirm .box .topping div{
+    margin-bottom: 5%;
+    position: relative;
 }
-.confirm .box table tbody .quantity mat-icon{
-    font-size: 15px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
+.confirm .box .topping p{
+    margin: 0;
+    width: 50%;
+    text-align: right;
 }
-.confirm .box table tbody .price{
+.confirm .box .topping span{
+    position: absolute;
+    top: 0;
+    right: 30%;
+}
+.confirm .box .topping mat-icon{
+    position: absolute;
+    top: 0;
+}
+.confirm .box .price{
     vertical-align: top;
-    font-size: 15px;
+    margin: 0 5%;
+    text-align: center;
+    font-weight: 600;
+}
+.confirm .box .quantity{
+    position: relative;
+    vertical-align: top;
+    margin: 0 5%;
+    text-align: center;
 }
 .confirm .box .total{
     float: right;
     color: #eb9239;
     margin-top: 15px;
+    font-weight: 600;
 }
 .confirm .box .total span{
     color: #999;
 }
-.confirm .header{
-    position: absolute;
-    top: 25px;
-    width: 100%;
-    max-width: 480px;
-}
-.confirm .header .confirm_name{
-    font-size: 40px;
-    font-family: 'cookie', cursive;
-    margin: 0;
-    text-align: center;
-}
-
-
 .confirm .footer{
-    position: fixed;
-    bottom: 0;
-    height: 94px;
+    position: absolute;
     background-color: black;
+    bottom: 0;
     width: 100%;
-    max-width: 480px;
+    height: 12.5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .confirm .footer button{
-    background: transparent;
-    color: white;
-    padding: 0 20px;
+    padding: 3%;
+    margin: 2%;
+    background-color: black;
     line-height: 40px;
+    color: white;
     outline: none;
     font-family: 'texgyreadventor';
-    border: 1px solid white;
-    font-size: 17px;
 }
-.confirm .sbm{
-    position: fixed;
-    bottom: 0;
-    color: white;
-    font-size: 10px;
+.confirm .footer div{
+    background: white;
+    border-radius: 50%;
+    position: absolute;
     text-align: center;
-    width: 100%;
-    max-width: 450px;
-    line-height: 25px;
+}
+.confirm .footer .home{
+    left: 7%;
+}
+.confirm .footer .cart{
+    right: 7%;
+}
+@media (min-width: 768px){
+    .confirm .header{
+        top: 50px;
+    }
+    .confirm .header .confirm_name{
+        font-size: 100px;
+        line-height: 100px;
+    }
+    .confirm .footer button{
+        font-size: 53px;
+        line-height: 50px;
+        border: 2px solid white;
+    }
+    .confirm .footer div{
+        width: 100px;
+        height: 100px;
+    }
+    .confirm .footer mat-icon{
+        font-size: 80px;
+        width: 80px;
+        height: 80px;
+        line-height: 100px;
+    }
+    .confirm .box table thead tr td{
+        font-size: 35px;
+        line-height: 60px;
+    }
+    .confirm .box table tbody .action mat-icon{
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    .confirm .box .item{
+        font-size: 22px;
+    }
+    .confirm .box .topping{
+        font-size: 22px;
+    }
+    .confirm .box .topping p{
+        line-height: 25px;
+    }
+    .confirm .box .topping span{
+        font-size: 20px;
+        padding: 0 20px;
+        border: 1px solid black;
+    }
+    .confirm .box .topping mat-icon{
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    .confirm .box .topping mat-icon.plus{
+        right: 55px;
+    }
+    .confirm .box .topping mat-icon.minus{
+        right: 10px;
+    }
+    .confirm .box .price{
+        font-size: 22px;
+    }
+    .confirm .box .quantity span{
+        position: absolute;
+        left: 30px;
+        font-size: 20px;
+        padding: 0 20px;
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+    .confirm .box .quantity mat-icon{
+        position: absolute;
+        margin: 0 5px;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    .confirm .box .quantity mat-icon.plus{
+        right: 70px;
+    }
+    .confirm .box .quantity mat-icon.minus{
+        right: 20px;
+    }
+    .confirm .box .total{
+        font-size: 30px;
+    }
+    .confirm .box .total span{
+        font-size: 30px;
+    }
+}
+@media (max-width: 768px){
+    .confirm .header{
+        top: 30px;
+    }
+    .confirm .header .confirm_name{
+        font-size: 40px;
+        line-height: 30px;
+    }
+    .confirm .footer button{
+        font-size: 18px;
+        line-height: 16px;
+        border: 1px solid white;
+    }
+    .confirm .footer div{
+        width: 40px;
+        height: 40px;
+    }
+    .confirm .footer mat-icon{
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+    }
+
+    .confirm .box table thead tr td{
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .confirm .box table tbody .action mat-icon{
+        font-size: 15px;
+        width: 15px;
+        height: 15px;
+    }
+    .confirm .box .item{
+        font-size: 10px;
+    }
+    .confirm .box .topping{
+        font-size: 9px;
+    }
+    .confirm .box .topping p{
+        line-height: 10px;
+    }
+    .confirm .box .topping span{
+        font-size: 7px;
+        padding: 0 6px;
+        border: 1px solid black;
+    }
+    .confirm .box .topping mat-icon{
+        font-size: 12px;
+        width: 12px;
+        height: 12px;
+    }
+    .confirm .box .topping mat-icon.plus{
+        right: 20px;
+    }
+    .confirm .box .topping mat-icon.minus{
+        right: 0px;
+    }
+    .confirm .box .price{
+        font-size: 10px;
+    }
+    .confirm .box .quantity span{
+        position: absolute;
+        left: 10px;
+        font-size: 7px;
+        padding: 0 5px;
+        margin-right: 5px;
+        border: 1px solid black;
+    }
+    .confirm .box .quantity mat-icon{
+        position: absolute;
+        margin: 0 2px;
+        font-size: 12px;
+        width: 12px;
+        height: 12px;
+    }
+    .confirm .box .quantity mat-icon.plus{
+        right: 30px;
+    }
+    .confirm .box .quantity mat-icon.minus{
+        right: 10px;
+    }
+    .confirm .box .total{
+        font-size: 15px;
+    }
+    .confirm .box .total span{
+        font-size: 15px;
+    }
+}
+@media (max-width: 380px){
+    .confirm .footer button{
+        font-size: 14px;
+        line-height: 12px;
+        border: 1px solid white;
+    }
+    .confirm .box .topping p{
+        line-height: 9px;
+    }
+    .confirm .box .topping span{
+        font-size: 6px;
+        padding: 0 4px;
+        border: 1px solid black;
+    }
+    .confirm .box .topping mat-icon{
+        font-size: 11px;
+        width: 11px;
+        height: 11px;
+    }
+    .confirm .box .topping mat-icon.plus{
+        right: 14px;
+    }
+    .confirm .box .topping mat-icon.minus{
+        right: 0px;
+    }
+    .confirm .box .quantity span{
+        position: absolute;
+        left: 10px;
+        font-size: 6px;
+        padding: 0 4px;
+        border: 1px solid black;
+    }
+    .confirm .box .quantity mat-icon{
+        position: absolute;
+        margin: 0 2px;
+        font-size: 11px;
+        width: 11px;
+        height: 11px;
+    }
+    .confirm .box .quantity mat-icon.plus{
+        right: 25px;
+    }
+    .confirm .box .quantity mat-icon.minus{
+        right: 10px;
+    }
 }
