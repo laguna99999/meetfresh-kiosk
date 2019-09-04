@@ -77,7 +77,7 @@
     text-align: center;
 }
 .list .footer{
-    position: absolute;
+    position: fixed;
     background-color: black;
     bottom: 0;
     width: 100%;
@@ -191,5 +191,17 @@
         width: 30px;
         height: 30px;
         line-height: 40px;
+    }
+}
+@media (max-width: 380px){
+    .list .header{
+        top: 26px;
+    }
+    .list .products{
+        top: 14%;
+    }
+    .list .products .product .product_description p{
+        font-size: 8px;
+        line-height: 10px;
     }
 }

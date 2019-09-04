@@ -62,7 +62,7 @@
     max-width: 60%;
 }
 .payment .footer{
-    position: absolute;
+    position: fixed;
     background-color: black;
     bottom: 0;
     width: 100%;

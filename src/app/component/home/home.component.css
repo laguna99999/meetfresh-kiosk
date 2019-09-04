@@ -33,7 +33,7 @@
     margin: 0 10.2%;
 }
 .home .footer{
-    position: absolute;
+    position: fixed;
     background-color: black;
     bottom: 0;
     width: 100%;

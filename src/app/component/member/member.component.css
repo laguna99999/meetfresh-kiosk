@@ -69,7 +69,7 @@
     top: 33%;
 }
 .member .footer{
-    position: absolute;
+    position: fixed;
     background-color: black;
     bottom: 0;
     width: 100%;

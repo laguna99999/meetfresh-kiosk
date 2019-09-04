@@ -112,7 +112,7 @@
     color: #999;
 }
 .confirm .footer{
-    position: absolute;
+    position: fixed;
     background-color: black;
     bottom: 0;
     width: 100%;
