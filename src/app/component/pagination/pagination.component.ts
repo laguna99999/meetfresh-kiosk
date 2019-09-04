@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalstorageService } from '../../service/localstorage.service';
 @Component({
     selector: 'app-pagination',
     templateUrl: './pagination.component.html',
@@ -10,6 +11,7 @@ export class PaginationComponent implements OnInit {
     page_number: number = 0;
 
     constructor(
+        public local: LocalstorageService,
         private router: Router
     ) { }
 
@@ -27,10 +29,9 @@ export class PaginationComponent implements OnInit {
     }
 
     enter(){
-        this.router.navigate(['menu']);
-    }
-
-    help(){
-
+        if(this.page_number != 0){
+            this.local.set('page_number', this.page_number);
+            this.router.navigate(['menu']);
+        }
     }
 }

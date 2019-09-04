@@ -25,11 +25,17 @@ export class ConfirmComponent implements OnInit {
 
     ngOnInit() {
         this.products = this.local.get('selected_products');
-        this.update_price();
+        if(this.products){
+            this.update_price();
+        }
     }
 
     public back(){
-        this.router.navigate(['/list/' + this.local.get('menu').id]);
+        if(this.local.get('menu')){
+            this.router.navigate(['/list/' + this.local.get('menu').id]);
+        }else{
+            this.router.navigate(['/menu']);
+        }
     }
 
     public increase(item: any){
