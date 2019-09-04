@@ -238,11 +238,11 @@
         font-size: 22.5px;
         line-height: 50px;
     }
-    .customize .box .level .lists mat-icon{
-        font-size: 30px;
-        width: 30px;
-        height: 30px;
-        margin-left: 10px;
+    .customize .box .level .lists .check{
+        font-size: 18px;
+        padding-left: 27px;
+        margin-left: 20px;
+        border: 1px solid black;
     }
     .customize .topping-image{
         margin-left: -200px;
@@ -329,27 +329,28 @@
         margin: 0 1%;
     }
     .customize .box .level p{
-        font-size: 12px;
-        line-height: 30px;
+        font-size: 13px;
+        line-height: 25px;
     }
     .customize .box .level .sugar_level .lists{
         width: 65%;
+        bottom: 8px;
     }
     .customize .box .level .ice_level .lists{
         width: 65%;
+        bottom: 8px;
     }
     .customize .box .level .lists .level_list{
-        height: 15px;
+        line-height: 14px;
     }
     .customize .box .level .lists span{
-        font-size: 9px;
-        line-height: 10px;
+        font-size: 10px;
     }
-    .customize .box .level .lists mat-icon{
-        font-size: 12px;
-        width: 12px;
-        height: 12px;
-        margin-left: 5px;
+    .customize .box .level .lists .check{
+        font-size: 6px;
+        padding-left: 9px;
+        margin-left: 10px;
+        border: 1px solid black;
     }
     .customize .topping-image{
         margin-left: -75px;
@@ -382,5 +383,77 @@
         width: 30px;
         height: 30px;
         line-height: 40px;
+    }
+}
+@media (max-width: 380px){
+    .customize .header .bread_crumb{
+        font-size: 8px;
+    }
+    .customize .box .order .description .name{
+        font-size: 18px;
+        line-height: 40px;
+        max-height: 40px;
+        overflow: auto;
+    }
+    .customize .box .order .description .names{
+        font-size: 8px;
+        margin-top: 10%;
+    }
+    .customize .box .order .description .specification{
+        font-size: 9px;
+    }
+    .customize .box .topping p{
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .customize .box .topping .topping_list{
+        width: 75%;
+        line-height: 15px;
+    }
+    .customize .box .topping .topping_list .item{
+        font-size: 8px;
+    }
+    .customize .box .topping .topping_list .count{
+        padding: 0 4%;
+        margin: 0 2%;
+        border: 1px solid black;
+        line-height: 10px;
+        font-size: 8px;
+    }
+    .customize .box .topping .topping_list mat-icon{
+        font-size: 10px;
+        line-height: 15px;
+        width: 10px;
+        height: 10px;
+        margin: 0 1%;
+    }
+    .customize .box .level p{
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .customize .box .level .sugar_level .lists{
+        width: 65%;
+        bottom: 5px;
+    }
+    .customize .box .level .ice_level .lists{
+        width: 65%;
+        bottom: 5px;
+    }
+    .customize .box .level .lists .level_list{
+        line-height: 11px;
+    }
+    .customize .box .level .lists span{
+        font-size: 8px;
+    }
+    .customize .box .level .lists .check{
+        font-size: 5px;
+        padding-left: 7px;
+        margin-left: 8px;
+        border: 1px solid black;
+    }
+    .customize .footer button{
+        font-size: 14px;
+        line-height: 12px;
+        border: 1px solid white;
     }
 }

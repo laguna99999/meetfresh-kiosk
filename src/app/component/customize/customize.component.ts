@@ -73,10 +73,12 @@ export class CustomizeComponent implements OnInit {
         this.router.navigate(['/confirm']);
     }
     public level(tag: any){
-        for(let item of tag.target.parentElement.parentElement.getElementsByTagName('mat-icon')[Symbol.iterator]()){
-            item.innerText = 'crop_square';
+        for(let item of tag.target.parentElement.parentElement.getElementsByClassName('check')[Symbol.iterator]()){
+            item.setAttribute('checked', 'false');
+            item.setAttribute('style', 'background: white; border: 1px solid black;');
         }
-        tag.target.innerText = 'stop';
+        tag.target.setAttribute('checked', 'true');
+        tag.target.setAttribute('style', 'background: black;');
     }
     public show(img: any){
         let tag = document.getElementsByClassName('topping-image')[0];
@@ -113,17 +115,17 @@ export class CustomizeComponent implements OnInit {
         this.product.topping = this.toppings;
         this.product.topping_secondary = this.toppings_secondary;
 
-        let sugar = document.getElementsByClassName('sugar_level')[0].getElementsByTagName('mat-icon');
-        let ice = document.getElementsByClassName('ice_level')[0].getElementsByTagName('mat-icon');
+        let sugar = document.getElementsByClassName('sugar_level')[0].getElementsByClassName('check');
+        let ice = document.getElementsByClassName('ice_level')[0].getElementsByClassName('check');
 
         for(let item of sugar[Symbol.iterator]()){
-            if(item.innerText == 'stop'){
+            if(item.getAttribute('checked') == 'true'){
                 this.product.sugar_level = item.getAttribute('value');
             }
         }
 
         for(let item of ice[Symbol.iterator]()){
-            if(item.innerText == 'stop'){
+            if(item.getAttribute('checked') == 'true'){
                 this.product.ice_level = item.getAttribute('value');
             }
         }
