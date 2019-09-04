@@ -1,0 +1,76 @@
+.thankyou{
+    position: relative;
+    height: 100%;
+}
+.thankyou .background{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.thankyou .box{
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 20%;
+}
+.thankyou .box h1{
+    width: 100%;
+    text-align: center;
+}
+.thankyou .box h3{
+    width: 100%;
+    text-align: center;
+}
+.thankyou .box .img{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.thankyou .box .ty img{
+    width: 35%;
+}
+.thankyou .box .qr img{
+    width: 25%;
+}
+@media (min-width: 768px){
+    .thankyou .box h1{
+        font-size: 50px;
+    }
+    .thankyou .box h3{
+        font-size: 30px;
+    }
+    .thankyou .box .qr{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 767px){
+    .thankyou .box h1{
+        font-size: 20px;
+    }
+    .thankyou .box h3{
+        font-size: 12px;
+    }
+    .thankyou .box .social{
+        margin-bottom: 10px;
+    }
+    .thankyou .box .social img{
+        height: 20px;
+    }
+}
+@media (max-width: 380px){
+    .thankyou .box h1{
+        font-size: 16px;
+    }
+    .thankyou .box h3{
+        font-size: 10px;
+    }
+    .thankyou .box .social{
+        margin-bottom: 8px;
+    }
+    .thankyou .box .social img{
+        height: 15px;
+    }
+}
