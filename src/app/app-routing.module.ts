@@ -7,9 +7,9 @@ import { MenuComponent } from './component/menu/menu.component';
 import { ListComponent } from './component/list/list.component';
 import { CustomizeComponent } from './component/customize/customize.component';
 import { ConfirmComponent } from './component/confirm/confirm.component';
-import { EndComponent } from './component/end/end.component';
-import { CheckoutComponent } from './component/checkout/checkout.component';
-
+import { PaymentComponent } from './component/payment/payment.component';
+import { ThankyouComponent } from './component/thankyou/thankyou.component';
+import { MemberComponent } from './component/member/member.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'pager', component: PaginationComponent },
@@ -17,8 +17,9 @@ const routes: Routes = [
     { path: 'list/:param', component: ListComponent },
     { path: 'customize/:param', component: CustomizeComponent },
     { path: 'confirm', component: ConfirmComponent },
-    { path: 'end', component: EndComponent },
-    { path: 'checkout', component: CheckoutComponent },
+    { path: 'member', component: MemberComponent },
+    { path: 'payment', component: PaymentComponent },
+    { path: 'thankyou', component: ThankyouComponent },
     { path: '**', redirectTo: '' },
 ];
 

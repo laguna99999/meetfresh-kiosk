@@ -107,7 +107,7 @@ export class ConfirmComponent implements OnInit {
     public checkout(){
         this.local.set('total', this.price);
         this.local.set('final', this.products);
-        this.router.navigate(['/checkout']);
+        this.router.navigate(['/member']);
     }
     public home(){
         this.router.navigate(['/home']);
@@ -115,12 +115,12 @@ export class ConfirmComponent implements OnInit {
     public dine(){
         this.local.set('total', this.price);
         this.local.set('final', this.products);
-        this.router.navigate(['/checkout']);
+        this.router.navigate(['/member']);
     }
     public togo(){
         this.local.set('total', this.price);
         this.local.set('final', this.products);
-        this.router.navigate(['/checkout']);
+        this.router.navigate(['/member']);
     }
     public cart(){
         this.router.navigate(['/confirm']);

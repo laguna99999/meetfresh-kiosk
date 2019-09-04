@@ -7,13 +7,14 @@ import { PaginationComponent } from './component/pagination/pagination.component
 import { ListComponent } from './component/list/list.component';
 import { ConfirmComponent } from './component/confirm/confirm.component';
 import { CustomizeComponent } from './component/customize/customize.component';
-import { EndComponent } from './component/end/end.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './module/material/material.module';
-import { CheckoutComponent } from './component/checkout/checkout.component';
 import { SbmComponent } from './component/sbm/sbm.component';
 import { MenuComponent } from './component/menu/menu.component';
+import { MemberComponent } from './component/member/member.component';
+import { PaymentComponent } from './component/payment/payment.component';
+import { ThankyouComponent } from './component/thankyou/thankyou.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,10 +23,11 @@ import { MenuComponent } from './component/menu/menu.component';
     ListComponent,
     ConfirmComponent,
     CustomizeComponent,
-    EndComponent,
-    CheckoutComponent,
     SbmComponent,
-    MenuComponent
+    MenuComponent,
+    MemberComponent,
+    PaymentComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,

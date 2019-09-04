@@ -1,0 +1,29 @@
+<div class="member">
+    <img class="background" src="/assets/img/v2/background.jpg" alt="MeetFresh background">
+    <div class="header">
+        <p class="member_name">Are you a member?</p>
+    </div>
+    <div class="box">
+        <div class="barcode" (click)="scan()">
+            <h1>Member Login</h1>
+            <div>
+                <img src="/assets/img/v2/barcode.png" alt="Barcode scanner">
+            </div>
+            <h3>Scan your<br> membership barcode</h3>
+        </div>
+        <div class="nonmember" (click)="payment()">
+            <h1>Non-Member</h1>
+            <div>
+                <img src="/assets/img/v2/pic.png" alt="Non member">
+            </div>
+            <h3>Join later</h3>
+        </div>
+    </div>
+    <div class="footer">
+        <button type="button" name="back" (click)="back()">Back</button>
+        <div class="home">
+            <mat-icon (click)="home()">home</mat-icon>
+        </div>
+    </div>
+    <app-sbm></app-sbm>
+</div>
