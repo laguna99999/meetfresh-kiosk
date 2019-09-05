@@ -68,10 +68,17 @@
         </div>
     </div>
     <div class="footer">
-        <button type="button" name="menu" (click)="go_menu()">Menu</button>
-        <button type="button" name="back" (click)="add_cart()">Add to cart</button>
+        <div class="cancel">
+            <mat-icon (click)="cancel()">close</mat-icon>
+        </div>
+        <div class="back">
+            <mat-icon (click)="back()">arrow_back</mat-icon>
+        </div>
         <div class="home">
-            <mat-icon (click)="home()">home</mat-icon>
+            <mat-icon (click)="go_menu()">home</mat-icon>
+        </div>
+        <div class="add_cart">
+            <mat-icon (click)="add_cart()">add_shopping_cart</mat-icon>
         </div>
         <div class="cart">
             <mat-icon (click)="cart()">shopping_cart</mat-icon>

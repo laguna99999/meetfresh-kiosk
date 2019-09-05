@@ -6,12 +6,7 @@
             <span
                 *ngFor="let item of global.category; let i = index;"
                 [ngStyle]="{'color': i == category_id - 1 ? 'red' : 'black'}"
-                (click)="setCategory(item.id)">
-                {{item.name}}
-                <span
-                    style="color: black"
-                    *ngIf="i != (global.category.length - 1)">/
-                </span>
+                (click)="setCategory(item.id)">&nbsp;{{item.name}}
             </span>
         </p>
     </div>
@@ -31,9 +26,11 @@
         <mat-icon class="next" (click)="next()">play_arrow</mat-icon>
     </div>
     <div class="footer">
-        <button type="button" name="menu" (click)="go_menu()">Menu</button>
+        <div class="cancel">
+            <mat-icon (click)="cancel()">close</mat-icon>
+        </div>
         <div class="home">
-            <mat-icon (click)="home()">home</mat-icon>
+            <mat-icon (click)="go_menu()">home</mat-icon>
         </div>
         <div class="cart">
             <mat-icon (click)="cart()">shopping_cart</mat-icon>

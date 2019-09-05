@@ -76,14 +76,14 @@ export class ListComponent implements OnInit {
         this.category_id = id;
         this.filterByCategory();
     }
-    public home(){
-        this.router.navigate(['/']);
-    }
     public go_menu(){
         this.router.navigate(['/menu']);
     }
     public cart(){
         this.router.navigate(['/confirm']);
+    }
+    public cancel(){
+        
     }
     private handleResponse(data){
         this.all_products = data.product.filter(item => {

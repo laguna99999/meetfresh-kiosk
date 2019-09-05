@@ -24,7 +24,10 @@ export class MemberComponent implements OnInit {
     public back(){
         this.router.navigate(['/confirm']);
     }
-    public home(){
-        this.router.navigate(['/home']);
+    public go_menu(){
+        this.router.navigate(['/menu']);
+    }
+    public cancel(){
+        
     }
 }

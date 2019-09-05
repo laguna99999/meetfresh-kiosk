@@ -27,8 +27,8 @@ export class PaymentComponent implements OnInit {
     public back(){
         this.router.navigate(['/member']);
     }
-    public home(){
-        this.router.navigate(['/home']);
+    public cancel(){
+        
     }
     public go_menu(){
         this.router.navigate(['/menu']);

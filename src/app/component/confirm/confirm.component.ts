@@ -117,7 +117,9 @@ export class ConfirmComponent implements OnInit {
     public back(){
         this.router.navigate(['/customize/' + this.local.get('selected_product').id]);
     }
-
+    public cancel(){
+        
+    }
     private update_price(){
         this.price = 0;
         for(let item of this.products){

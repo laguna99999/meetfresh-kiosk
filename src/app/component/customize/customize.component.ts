@@ -57,8 +57,11 @@ export class CustomizeComponent implements OnInit {
     public go_menu(){
         this.router.navigate(['/menu']);
     }
-    public home(){
-        this.router.navigate(['/']);
+    public cancel(){
+
+    }
+    public back(){
+        
     }
     public cart(){
         this.router.navigate(['/confirm']);

@@ -103,33 +103,18 @@
 .confirm .footer{
     position: fixed;
     background-color: black;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 12.5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-.confirm .footer button{
-    padding: 3%;
-    margin: 2%;
-    background-color: black;
-    line-height: 40px;
-    color: white;
-    outline: none;
-    font-family: 'texgyreadventor';
 }
 .confirm .footer div{
     background: white;
     border-radius: 50%;
-    position: absolute;
     text-align: center;
-}
-.confirm .footer .home{
-    left: 7%;
-}
-.confirm .footer .cart{
-    right: 7%;
 }
 @media (min-width: 768px){
     .confirm .header{

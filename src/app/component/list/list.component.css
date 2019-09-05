@@ -25,6 +25,10 @@
 }
 .list .header .category span{
     cursor: pointer;
+    position: relative;
+}
+.list .header .category span:before{
+
 }
 .list .products{
     position: absolute;
@@ -79,38 +83,18 @@
 .list .footer{
     position: fixed;
     background-color: black;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 12.5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-.list .selected{
-    background-color: #ddd !important;
-    color: red !important;
-    font-weight: 900;
-}
-.list .footer button{
-    padding: 3%;
-    margin: 2%;
-    background-color: black;
-    line-height: 40px;
-    color: white;
-    outline: none;
-    font-family: 'texgyreadventor';
 }
 .list .footer div{
     background: white;
     border-radius: 50%;
-    position: absolute;
     text-align: center;
-}
-.list .footer .home{
-    left: 7%;
-}
-.list .footer .cart{
-    right: 7%;
 }
 
 @media (min-width: 768px){
@@ -137,11 +121,6 @@
     .list .products .product .product_description p{
         font-size: 20px;
         line-height: 30px;
-    }
-    .list .footer button{
-        font-size: 53px;
-        line-height: 50px;
-        border: 2px solid white;
     }
     .list .footer div{
         width: 100px;
@@ -176,11 +155,6 @@
     .list .products .product .product_description p{
         font-size: 9px;
         line-height: 12px;
-    }
-    .list .footer button{
-        font-size: 18px;
-        line-height: 16px;
-        border: 1px solid white;
     }
     .list .footer div{
         width: 40px;

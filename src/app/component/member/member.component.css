@@ -75,26 +75,13 @@
     width: 100%;
     height: 12.5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-.member .footer button{
-    padding: 3%;
-    margin: 2%;
-    background-color: black;
-    line-height: 40px;
-    color: white;
-    outline: none;
-    font-family: 'texgyreadventor';
 }
 .member .footer div{
     background: white;
     border-radius: 50%;
-    position: absolute;
     text-align: center;
-}
-.member .footer .home{
-    left: 7%;
 }
 @media (min-width: 768px){
     .member .header{
