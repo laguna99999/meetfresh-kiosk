@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
     all_products: any;
     products: any;
 
-    selected_products: any;
+    selected_product: any;
 
     constructor(
         private router: Router,
@@ -30,7 +30,7 @@ export class ListComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.selected_products = [];
+        this.selected_product = [];
         if(this.param == -1){
             this.subscriber = this.route.params.subscribe(params => {
     			this.param = +params['param']; // (+) converts string 'param' to a number
@@ -39,8 +39,8 @@ export class ListComponent implements OnInit {
 
         this.menu = this.local.get('menu');
 
-        if(this.local.get('selected_products')){
-            this.selected_products = [...this.local.get('selected_products')];
+        if(this.local.get('selected_product')){
+            this.selected_product = this.local.get('selected_product');
         }
     }
 
@@ -53,8 +53,8 @@ export class ListComponent implements OnInit {
 
     add_product(item: any){
         item.qty = 1;
-        this.selected_products.push(item);
-        this.local.set("selected_products", this.selected_products);
+        this.selected_product = item;
+        this.local.set("selected_product", this.selected_product);
         this.router.navigate(['/customize/' + item.id]);
     }
 

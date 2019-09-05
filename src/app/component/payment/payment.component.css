@@ -89,6 +89,9 @@
 .payment .footer .home{
     left: 7%;
 }
+.payment .footer .menu{
+    right: 7%;
+}
 @media (min-width: 768px){
     .payment .header{
         top: 50px;

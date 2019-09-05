@@ -24,11 +24,13 @@ export class PaymentComponent implements OnInit {
         this.router.navigate(['/thankyou']);
     }
 
-
     public back(){
         this.router.navigate(['/member']);
     }
     public home(){
         this.router.navigate(['/home']);
+    }
+    public go_menu(){
+        this.router.navigate(['/menu']);
     }
 }

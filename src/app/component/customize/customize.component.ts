@@ -36,11 +36,8 @@ export class CustomizeComponent implements OnInit {
         this.subscriber = this.route.params.subscribe(params => {
             this.param = +params['param']; // (+) converts string 'param' to a number
         });
-
-        for(let item of this.local.get('selected_products')){
-            if(item.id == this.param){
-                this.product = item;
-            }
+        if(this.local.get('selected_product')){
+            this.product = this.local.get('selected_product');
         }
     }
 
@@ -58,18 +55,16 @@ export class CustomizeComponent implements OnInit {
     }
 
     public go_menu(){
-        this.update_seleced_products();
         this.router.navigate(['/menu']);
     }
     public home(){
         this.router.navigate(['/']);
     }
     public cart(){
-        this.update_seleced_products();
         this.router.navigate(['/confirm']);
     }
     public add_cart(){
-        this.update_seleced_products();
+        this.add_to_cart();
         this.router.navigate(['/confirm']);
     }
     public level(tag: any){
@@ -88,7 +83,7 @@ export class CustomizeComponent implements OnInit {
     public hide(){
         document.getElementsByClassName('topping-image')[0].setAttribute('style', 'display: none')
     }
-    private update_seleced_products(){
+    private add_to_cart(){
         this.toppings = [];
         this.toppings_secondary = [];
         this.sugar_level = 1;
@@ -132,14 +127,23 @@ export class CustomizeComponent implements OnInit {
 
         let updated_products = [];
 
-        for(let item of this.local.get('selected_products')){
-            if(item.id != this.product.id){
-                updated_products.push(item);
-            }else{
+        if(this.local.get('cart')){
+            var flag = false;
+            for(let item of this.local.get('cart')){
+                if(item.id != this.product.id){
+                    updated_products.push(item);
+                }else{
+                    flag = true;
+                    updated_products.push(this.product);
+                }
+            }
+            if(!flag){
                 updated_products.push(this.product);
             }
+        }else{
+            updated_products.push(this.product);
         }
 
-        this.local.set("selected_products", updated_products);
+        this.local.set("cart", updated_products);
     }
 }

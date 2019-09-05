@@ -24,18 +24,14 @@ export class ConfirmComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.products = this.local.get('selected_products');
+        this.products = this.local.get('cart');
         if(this.products){
             this.update_price();
         }
     }
 
-    public back(){
-        if(this.local.get('menu')){
-            this.router.navigate(['/list/' + this.local.get('menu').id]);
-        }else{
-            this.router.navigate(['/menu']);
-        }
+    public go_menu(){
+        this.router.navigate(['/menu']);
     }
 
     public increase(item: any){
@@ -128,8 +124,8 @@ export class ConfirmComponent implements OnInit {
         this.local.set('final', this.products);
         this.router.navigate(['/member']);
     }
-    public cart(){
-        this.router.navigate(['/confirm']);
+    public back(){
+        this.router.navigate(['/customize/' + this.local.get('selected_product').id]);
     }
 
     private update_price(){
@@ -137,15 +133,19 @@ export class ConfirmComponent implements OnInit {
         for(let item of this.products){
             let price = 0;
             price = parseFloat(item.price) * parseFloat(item.qty);
-            for(let tp of item.topping){
-                price += parseFloat(tp.count) * parseFloat(item.qty);
+            if(item.topping){
+                for(let tp of item.topping){
+                    price += parseFloat(tp.count) * parseFloat(item.qty);
+                }
             }
-            for(let tps of item.topping_secondary){
-                price += 0.5 * parseFloat(tps.count) * parseFloat(item.qty);
+            if(item.topping_secondary){
+                for(let tps of item.topping_secondary){
+                    price += 0.5 * parseFloat(tps.count) * parseFloat(item.qty);
+                }
             }
             item.total_price = price;
             this.price += price;
         }
-        this.local.set('selected_products', this.products);
+        this.local.set('cart', this.products);
     }
 }
