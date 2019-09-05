@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './component/home/home.component';
+import { TypeComponent } from './component/type/type.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { ListComponent } from './component/list/list.component';
@@ -12,6 +13,7 @@ import { ThankyouComponent } from './component/thankyou/thankyou.component';
 import { MemberComponent } from './component/member/member.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'type', component: TypeComponent },
     { path: 'pager', component: PaginationComponent },
     { path: 'menu', component: MenuComponent },
     { path: 'list/:param', component: ListComponent },

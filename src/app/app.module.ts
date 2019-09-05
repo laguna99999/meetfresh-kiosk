@@ -15,6 +15,7 @@ import { MenuComponent } from './component/menu/menu.component';
 import { MemberComponent } from './component/member/member.component';
 import { PaymentComponent } from './component/payment/payment.component';
 import { ThankyouComponent } from './component/thankyou/thankyou.component';
+import { TypeComponent } from './component/type/type.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { ThankyouComponent } from './component/thankyou/thankyou.component';
     MenuComponent,
     MemberComponent,
     PaymentComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    TypeComponent
   ],
   imports: [
     BrowserModule,
