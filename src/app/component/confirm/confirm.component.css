@@ -116,6 +116,42 @@
     border-radius: 50%;
     text-align: center;
 }
+.confirm .modal_body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.confirm .modal{
+    border-radius: 3%;
+    position: absolute;
+    height: 40%;
+    width: 80%;
+    left: 10%;
+    top: 25%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.confirm .modal h1{
+    margin: 0;
+    text-align: center;
+    color: #323232;
+    margin-bottom: 10%;
+}
+.confirm .modal button{
+    width: 50%;
+    height: 15%;
+    outline: 0;
+    background: gray;
+    color: white;
+    border: 0;
+    margin-bottom: 7%;
+}
 @media (min-width: 768px){
     .confirm .header{
         top: 50px;
@@ -202,6 +238,12 @@
     }
     .confirm .box .total span{
         font-size: 30px;
+    }
+    .confirm .modal h1{
+        font-size: 50px;
+    }
+    .confirm .modal button{
+        font-size: 35px;
     }
 }
 @media (max-width: 768px){
@@ -292,6 +334,12 @@
     .confirm .box .total span{
         font-size: 15px;
     }
+    .confirm .modal h1{
+        font-size: 25px;
+    }
+    .confirm .modal button{
+        font-size: 16px;
+    }
 }
 @media (max-width: 380px){
     .confirm .footer button{
@@ -337,5 +385,11 @@
     }
     .confirm .box .quantity mat-icon.minus{
         right: 10px;
+    }
+    .confirm .modal h1{
+        font-size: 20px;
+    }
+    .confirm .modal button{
+        font-size: 12px;
     }
 }

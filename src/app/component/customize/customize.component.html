@@ -78,7 +78,7 @@
             <mat-icon (click)="go_menu()">home</mat-icon>
         </div>
         <div class="add_cart">
-            <mat-icon (click)="add_cart()">add_shopping_cart</mat-icon>
+            <mat-icon (click)="show_modal()">add_shopping_cart</mat-icon>
         </div>
         <div class="cart">
             <mat-icon (click)="cart()">shopping_cart</mat-icon>
@@ -88,5 +88,19 @@
     <div class="topping-image">
         <img src="" alt="MeetFresh Topping image">
         <mat-icon (click)="hide()">close</mat-icon>
+    </div>
+    <div class="modal_body" *ngIf="showCartModal">
+        <div class="modal">
+            <h1>Product successfully<br> added to your cart.</h1>
+            <button type="button" name="button" (click)="go_menu()">Continue shopping</button>
+            <button type="button" name="button" (click)="cart()">Check out</button>
+        </div>
+    </div>
+    <div class="modal_body" *ngIf="showCancelModal">
+        <div class="modal">
+            <h1>Are you sure want to<br> cancel this order?</h1>
+            <button type="button" name="button" (click)="yes()">Yes</button>
+            <button type="button" name="button" (click)="no()">No</button>
+        </div>
     </div>
 </div>

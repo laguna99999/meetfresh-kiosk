@@ -21,6 +21,8 @@ export class ListComponent implements OnInit {
 
     selected_product: any;
 
+    showCancelModal: Boolean = false;
+
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
@@ -83,7 +85,14 @@ export class ListComponent implements OnInit {
         this.router.navigate(['/confirm']);
     }
     public cancel(){
-        
+        this.showCancelModal = true;
+    }
+    public yes(){
+        this.showCancelModal = false;
+        this.router.navigate(['/']);
+    }
+    public no(){
+        this.showCancelModal = false;
     }
     private handleResponse(data){
         this.all_products = data.product.filter(item => {

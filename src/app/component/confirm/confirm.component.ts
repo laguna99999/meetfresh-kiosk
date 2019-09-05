@@ -14,6 +14,9 @@ export class ConfirmComponent implements OnInit {
 
     products: any;
     price: any = 0;
+
+    showCancelModal: Boolean = false;
+
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
@@ -124,7 +127,14 @@ export class ConfirmComponent implements OnInit {
         }
     }
     public cancel(){
-        
+        this.showCancelModal = true;
+    }
+    public yes(){
+        this.showCancelModal = false;
+        this.router.navigate(['/']);
+    }
+    public no(){
+        this.showCancelModal = false;
     }
     private update_price(){
         this.price = 0;

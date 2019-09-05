@@ -23,6 +23,9 @@ export class CustomizeComponent implements OnInit {
     sugar_level: any = '';
     ice_level: any = '';
 
+    showCartModal: Boolean = false;
+    showCancelModal: Boolean = false;
+
     constructor(
         private router: Router,
 		private route: ActivatedRoute,
@@ -55,20 +58,29 @@ export class CustomizeComponent implements OnInit {
     }
 
     public go_menu(){
+        this.showCartModal = false;
         this.router.navigate(['/menu']);
     }
     public cancel(){
-
+        this.showCancelModal = true;
+    }
+    public yes(){
+        this.showCancelModal = false;
+        this.router.navigate(['/']);
+    }
+    public no(){
+        this.showCancelModal = false;
     }
     public back(){
         this.router.navigate(['/list/' + this.local.get('menu').id]);
     }
     public cart(){
+        this.showCartModal = false;
         this.router.navigate(['/confirm']);
     }
-    public add_cart(){
+    public show_modal(){
+        this.showCartModal = true;
         this.add_to_cart();
-        this.router.navigate(['/confirm']);
     }
     public level(tag: any){
         for(let item of tag.target.parentElement.parentElement.getElementsByClassName('check')[Symbol.iterator]()){

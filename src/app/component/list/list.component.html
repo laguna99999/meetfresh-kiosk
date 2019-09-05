@@ -37,4 +37,11 @@
         </div>
     </div>
     <app-sbm></app-sbm>
+    <div class="modal_body" *ngIf="showCancelModal">
+        <div class="modal">
+            <h1>Are you sure want to<br> cancel this order?</h1>
+            <button type="button" name="button" (click)="yes()">Yes</button>
+            <button type="button" name="button" (click)="no()">No</button>
+        </div>
+    </div>
 </div>

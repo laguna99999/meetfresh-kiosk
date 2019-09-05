@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 })
 export class PaymentComponent implements OnInit {
 
+    showCancelModal: Boolean = false;
+
     constructor(
         private router: Router
     ) { }
@@ -28,7 +30,14 @@ export class PaymentComponent implements OnInit {
         this.router.navigate(['/member']);
     }
     public cancel(){
-        
+        this.showCancelModal = true;
+    }
+    public yes(){
+        this.showCancelModal = false;
+        this.router.navigate(['/']);
+    }
+    public no(){
+        this.showCancelModal = false;
     }
     public go_menu(){
         this.router.navigate(['/menu']);
