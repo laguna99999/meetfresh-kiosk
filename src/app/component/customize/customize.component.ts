@@ -61,7 +61,7 @@ export class CustomizeComponent implements OnInit {
 
     }
     public back(){
-        
+        this.router.navigate(['/list/' + this.local.get('menu').id]);
     }
     public cart(){
         this.router.navigate(['/confirm']);

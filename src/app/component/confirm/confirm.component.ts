@@ -107,15 +107,21 @@ export class ConfirmComponent implements OnInit {
         this.update_price();
     }
     public checkout(){
-        this.local.set('total', this.price);
-        this.local.set('final', this.products);
-        this.router.navigate(['/member']);
+        if(this.products){
+            this.local.set('total', this.price);
+            this.local.set('final', this.products);
+            this.router.navigate(['/member']);
+        }
     }
     public home(){
         this.router.navigate(['/home']);
     }
     public back(){
-        this.router.navigate(['/customize/' + this.local.get('selected_product').id]);
+        if(this.local.get('selected_product')){
+            this.router.navigate(['/customize/' + this.local.get('selected_product').id]);
+        }else{
+            this.router.navigate(['/list/' + this.local.get('menu').id]);
+        }
     }
     public cancel(){
         
