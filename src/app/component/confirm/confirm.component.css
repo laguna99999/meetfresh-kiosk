@@ -18,22 +18,11 @@
     margin: 0;
     text-align: center;
 }
-.confirm .dine{
-    position: absolute;
-    bottom: 16.67%;
-    width: 43.5%;
-    left: 6.5%;
-}
-.confirm .togo{
-    position: absolute;
-    bottom: 14.67%;
-    width: 43.5%;
-    right: 6.5%;
-}
+
 .confirm .box{
     position: absolute;
     width: 80%;
-    height: 50%;
+    height: 70%;
     top: 0;
     left: 0;
     margin-top: 20%;

@@ -114,16 +114,6 @@ export class ConfirmComponent implements OnInit {
     public home(){
         this.router.navigate(['/home']);
     }
-    public dine(){
-        this.local.set('total', this.price);
-        this.local.set('final', this.products);
-        this.router.navigate(['/member']);
-    }
-    public togo(){
-        this.local.set('total', this.price);
-        this.local.set('final', this.products);
-        this.router.navigate(['/member']);
-    }
     public back(){
         this.router.navigate(['/customize/' + this.local.get('selected_product').id]);
     }
